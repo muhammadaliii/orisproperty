@@ -1,0 +1,173 @@
+body {
+	&.on-scroll {
+		.filter-navbar {
+			top: 50px;
+			
+			@include breakpoint(tablet) {
+				top: 64px;
+			}
+		}
+	}
+}
+
+.filter-navbar {
+	background-color: rgba($blue, 0.7);
+	position: fixed;
+	z-index: 2;
+	top: 74px;
+	left: 0;
+	right: 0;
+	bottom: initial;
+	box-shadow: 2px 4px 30px rgba(0,0,0,0.15);
+	transition: $transition-base;
+	backdrop-filter: saturate(180%) blur(20px);
+	
+	@include breakpoint(tablet) {
+		top: 100px;
+	}
+
+	.wrapper {
+		padding: 10px 0;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	ul {
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+
+		li {
+			margin: 0;
+
+			+ li {
+				margin-left: 8px;
+			}
+		}
+	}
+
+	.search-nav {
+		position: relative;
+
+		.form-control {
+			color: $body-color;
+			padding: 10px 48px 10px 20px;
+			height: 40px;
+			border: 0;
+			border-radius: 30px;
+
+			&::placeholder {
+				color: $body-color;
+				font-style: italic;
+			}
+		}
+
+		.button {
+			font-size: 1em;
+			line-height: 100%;
+			width: 36px;
+			height: 36px;
+			padding: 0;
+			background-color: $dark-blue;
+			border-color: $dark-blue;
+			position: absolute;
+			z-index: 1;
+			top: 2px;
+			bottom: initial;
+			right: 2px;
+			left: initial;
+
+			&:hover {
+				@include breakpoint(desktop) {
+					background-color: $dark-navy;
+					border-color: $dark-navy;
+				}
+			}
+
+			&:focus {
+				background-color: $dark-navy;
+				border-color: $dark-navy;
+			}
+		}
+	}
+
+	.jcf-select {
+		background-color: $dark-blue;
+		color: $white;
+		transition: $transition-base;
+
+		&:hover {
+			@include breakpoint(desktop) {
+				background-color: darken($dark-blue, 10);
+			}
+		}
+
+		.jcf-select-text {
+			color: $white;
+		}
+	}
+
+	.form-group {
+		margin-bottom: 0;
+	}
+
+	.button-filter {
+		text-transform: initial;
+		padding: 11px 20px;
+		font-size: 1em;
+
+		&:hover {
+			@include breakpoint(desktop) {
+				color: $blue;
+				background-color: $white;
+				border-color: $white;
+			}
+		}
+
+		&:focus {
+			color: $blue;
+			background-color: $white;
+			border-color: $white;
+		}
+	}
+}
+
+.properties-listing {
+	padding-top: 95px;
+	
+	@include breakpoint(tablet) {
+		padding-top: 105px;
+	}
+
+	.wrapper {
+		padding: 0 20px;
+		
+		@include breakpoint(mobile-iphone) {
+			padding: 0;
+		}
+		
+		@include breakpoint(tablet) {
+			padding: 0;
+		}
+	}
+
+	.row {
+		[class*='col-'] {
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+	}
+
+	.properties-content {
+		+ .pagination {
+			margin-top: 40px;
+			
+			@include breakpoint(tablet) {
+				margin-top: 50px;
+			}
+		}
+	}
+}

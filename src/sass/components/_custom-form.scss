@@ -1,0 +1,58 @@
+.form {
+	.form-control {
+		color: $body-color;
+		font-size: 12px;
+		padding: 0 12px;
+		height: auto;
+		border: 0;
+		background-color: $white;
+		outline: 0;
+		line-height: 40px;
+		border-radius: 30px;
+
+		@include breakpoint(tablet) {
+			font-size: 14px;
+			padding: 0 16px;
+		}
+
+		&.price-currency {
+			text-align: left!important;
+		}
+
+		&:focus {
+			box-shadow: none;	
+		}
+	}
+
+	textarea {
+		&.form-control {
+			height: 160px;
+			resize: none;
+		}
+	}
+
+	::-webkit-input-placeholder {
+		color: $body-color;
+	}
+
+	:-moz-placeholder {
+		color: $body-color;
+	}
+
+	::-moz-placeholder {
+		color: $body-color;
+	}
+
+	:-ms-input-placeholder {  
+		color: $body-color;
+	}
+
+	.form-group {
+		position: relative;
+		margin: 0;
+
+		&[class*="col-"] {
+			padding: 6px 5px;
+		}
+	}
+}
