@@ -21,9 +21,10 @@ function stickyClass() {
 	$(window).scroll(function(event){
 		var scroll = $(window).scrollTop();
 		
-		$('.sort-filter').toggleClass('fixed',
-			scroll >= $('.sort-filter').offset().top - 54
+		$('.share-contact').toggleClass('hiding',
+			scroll >= $('.join-team').offset().top - 54
 		);
+		// $(this).siblings(".number").toggleClass("showing-number").slideToggle("slow");
 	});
 }
 
@@ -31,8 +32,8 @@ $(function() {
 	$(document).ready(function () {
 		stickyHeader();
 
-		if ($('.sort-filter').length > 0) {
-			// stickyClass();
+		if ($('.share-contact').length > 0) {
+			stickyClass();
 		}
 	});
 

@@ -23,7 +23,7 @@
 		color: $title-color;
 		
 		@include breakpoint(small-mobile) {
-			font-size: 1.7em;
+			font-size: 1.5em;
 		}
 		
 		@include breakpoint(tablet) {
@@ -263,6 +263,28 @@
 				bottom: 0;
 				margin-left: 4px;
 			}
+		}
+	}
+}
+
+.dropdown-menu {
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+	border-radius: 10px;
+	box-shadow: 2px 2px 15px rgba(0,0,0,0.15);
+
+	a {
+		color: $link-color;
+		padding: 6px 20px;
+
+		&:hover {
+			background-color: $button-hover-background;
+			color: $button-hover-color;
+		}
+
+		span {
+			margin-right: 4px;
 		}
 	}
 }

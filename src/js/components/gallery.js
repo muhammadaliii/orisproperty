@@ -9,6 +9,33 @@
 		download: false,
 	});
 
+	$('.detail-avatar .video-area').lightGallery({
+		thumbnail: true,
+		animateThumb: false,
+		showThumbByDefault: false,
+		exThumbImage: 'data-exthumbimage',
+		selector: '.selector',
+		loadYoutubeThumbnail: true,
+		youtubeThumbSize: 'default',
+		loadVimeoThumbnail: true,
+		vimeoThumbSize: 'thumbnail_medium',
+		download: false,
+	});
+
+	// $('main').lightGallery({
+	// 	thumbnail: true,
+	// 	animateThumb: false,
+	// 	showThumbByDefault: false,
+	// 	exThumbImage: 'data-exthumbimage',
+	// 	selector: '.selector',
+	// 	loadYoutubeThumbnail: true,
+	// 	youtubeThumbSize: 'default',
+	// 	loadVimeoThumbnail: true,
+	// 	vimeoThumbSize: 'thumbnail_medium',
+	// 	download: false,
+	// 	autoplayVideoOnSlide: true,
+	// });
+
 
 	var swiper = new Swiper('.cover .swiper-container', {
 		keyboard: {
@@ -81,6 +108,12 @@
 		scrollbar: {
 			el: ".swiper-scrollbar",
 			hide: false,
+		},
+		breakpoints: {
+			600: {
+				slidesPerView: 2,
+				spaceBetween: 30,
+			},
 		},
 	});
 

@@ -75,6 +75,11 @@ ol {
 	}
 }
 
+strong,
+b {
+	font-family: 'montserrat_bold';
+}
+
 .tooltip {
 	&.show {
 		opacity: 1;

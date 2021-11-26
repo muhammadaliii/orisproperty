@@ -48,6 +48,10 @@ $(function() {
 	// 	}, 4000);
 	// });
 
+	$(".show-number h6").click(function(){
+		$(this).siblings(".number").toggleClass("showing-number").slideToggle("slow");
+	});
+
 
 	var targetLoader = $("#loader-wrapper");
 
