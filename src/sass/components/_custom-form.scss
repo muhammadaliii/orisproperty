@@ -22,6 +22,10 @@
 		&:focus {
 			box-shadow: none;	
 		}
+
+		&::placeholder {
+			color: $body-color;
+		}
 	}
 
 	textarea {

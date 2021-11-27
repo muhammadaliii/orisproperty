@@ -22,6 +22,19 @@
 		download: false,
 	});
 
+	$('.video-listing').lightGallery({
+		thumbnail: true,
+		animateThumb: false,
+		showThumbByDefault: false,
+		exThumbImage: 'data-exthumbimage',
+		selector: '.selector',
+		loadYoutubeThumbnail: true,
+		youtubeThumbSize: 'default',
+		loadVimeoThumbnail: true,
+		vimeoThumbSize: 'thumbnail_medium',
+		download: false,
+	});
+
 	// $('main').lightGallery({
 	// 	thumbnail: true,
 	// 	animateThumb: false,

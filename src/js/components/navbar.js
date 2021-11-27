@@ -24,7 +24,6 @@ function stickyClass() {
 		$('.share-contact').toggleClass('hiding',
 			scroll >= $('.join-team').offset().top - 54
 		);
-		// $(this).siblings(".number").toggleClass("showing-number").slideToggle("slow");
 	});
 }
 
