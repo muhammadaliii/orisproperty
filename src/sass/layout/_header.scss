@@ -168,16 +168,16 @@ body {
 			}
 
 			.button-search {
-				background-color: $navy;
+				// background-color: $navy;
 				// background-color: rgba($black, 0.2);
 				// backdrop-filter: saturate(180%) blur(20px);
 
-				&:hover {
-					@include breakpoint(desktop) {
-						background-color: $white;
-						color: $dark-navy;
-					}
-				}
+				// &:hover {
+				// 	@include breakpoint(desktop) {
+				// 		background-color: $white;
+				// 		color: $dark-navy;
+				// 	}
+				// }
 			}
 
 			.brand-logo {
