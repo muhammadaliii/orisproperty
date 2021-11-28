@@ -195,7 +195,7 @@
 	 * Tests
 	 */
 	var tests = [
-		{ num: 3450000000, digits: 3 },
+		{ num: 4650000000, digits: 3 },
 		// { num: 1234, digits: 1 },
 		// { num: 100000000, digits: 1 },
 		// { num: 3450000000, digits: 3 },

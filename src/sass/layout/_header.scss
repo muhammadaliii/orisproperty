@@ -113,17 +113,21 @@ body {
 		}
 
 		.header-fix {
-			background: rgba(0,0,0,0.3);
-			background: -moz-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.09) 70%, rgba(0,0,0,0.02) 92%, rgba(0,0,0,0) 100%);
-			background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.3)), color-stop(70%, rgba(0,0,0,0.09)), color-stop(92%, rgba(0,0,0,0.02)), color-stop(100%, rgba(0,0,0,0)));
-			background: -webkit-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.09) 70%, rgba(0,0,0,0.02) 92%, rgba(0,0,0,0) 100%);
-			background: -o-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.09) 70%, rgba(0,0,0,0.02) 92%, rgba(0,0,0,0) 100%);
-			background: -ms-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.09) 70%, rgba(0,0,0,0.02) 92%, rgba(0,0,0,0) 100%);
-			background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.09) 70%, rgba(0,0,0,0.02) 92%, rgba(0,0,0,0) 100%);
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+			// background: rgba(0,0,0,0.3);
+			// background: -moz-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.09) 70%, rgba(0,0,0,0.02) 92%, rgba(0,0,0,0) 100%);
+			// background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0.3)), color-stop(70%, rgba(0,0,0,0.09)), color-stop(92%, rgba(0,0,0,0.02)), color-stop(100%, rgba(0,0,0,0)));
+			// background: -webkit-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.09) 70%, rgba(0,0,0,0.02) 92%, rgba(0,0,0,0) 100%);
+			// background: -o-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.09) 70%, rgba(0,0,0,0.02) 92%, rgba(0,0,0,0) 100%);
+			// background: -ms-linear-gradient(top, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.09) 70%, rgba(0,0,0,0.02) 92%, rgba(0,0,0,0) 100%);
+			// background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.09) 70%, rgba(0,0,0,0.02) 92%, rgba(0,0,0,0) 100%);
+			// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+
+			background-color: rgba($white, 0.5);
+			box-shadow: 0 1px 3px 0 rgba(27,27,27,0.1), 0 4px 8px 0 rgba(27,27,27,0.1);
+			backdrop-filter: saturate(180%) blur(20px);
 
 			&.show-menu {
-				background: rgba(255,255,255,0.7);
+				background: rgba($white, 0.7);
 
 				.brand-logo {
 					.logo {
@@ -132,7 +136,7 @@ body {
 				}
 
 				.button-search {
-					background-color: $dark-navy;
+					background-color: $navy;
 					backdrop-filter: none;
 				}
 			}
@@ -140,32 +144,33 @@ body {
 			.header-menu {
 				.menu {
 					a {
-						@include breakpoint(wide) {
-							color: $white;
-							text-shadow: 0 2px 15px rgba(0,0,0,0.3);
-						}
+						// @include breakpoint(wide) {
+						// 	color: $white;
+						// 	text-shadow: 0 2px 15px rgba(0,0,0,0.3);
+						// }
 
 
-						&.active {
-							@include breakpoint(wide) {
-								color: $dark-navy;
-								border-color: $dark-navy;
-							}
-						}
+						// &.active {
+						// 	@include breakpoint(wide) {
+						// 		color: $dark-navy;
+						// 		border-color: $dark-navy;
+						// 	}
+						// }
 
-						&:focus,
-						&:hover {
-							@include breakpoint(desktop) {
-								border-color: $dark-navy;
-							}
-						}
+						// &:focus,
+						// &:hover {
+						// 	@include breakpoint(desktop) {
+						// 		border-color: $dark-navy;
+						// 	}
+						// }
 					}
 				}
 			}
 
 			.button-search {
-				background-color: rgba($black, 0.2);
-				backdrop-filter: saturate(180%) blur(20px);
+				background-color: $navy;
+				// background-color: rgba($black, 0.2);
+				// backdrop-filter: saturate(180%) blur(20px);
 
 				&:hover {
 					@include breakpoint(desktop) {
@@ -177,7 +182,7 @@ body {
 
 			.brand-logo {
 				.logo {
-					background-image: url('../assets/img/logo-white.png');
+					background-image: url('../assets/img/logo.png');
 				}
 			}
 		}
@@ -195,7 +200,7 @@ body {
 	transition: all 0.3s linear;
 
 	&.show-menu {
-		background-color: rgba(255,255,255,0.7);
+		background-color: rgba($white, 0.7);
 		
 		@include breakpoint(wide) {
 			background-color: transparent;

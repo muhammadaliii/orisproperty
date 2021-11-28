@@ -3,14 +3,14 @@ body {
 		.toggle-down {
 			.menu-toggle-btn {
 				span {
-					background-color: $dark-navy;
+					background-color: $navy;
 				}
 			}
 
 			&.toggleDrawer {
 				.menu-toggle-btn {
 					span {
-						background-color: $dark-navy;
+						background-color: $navy;
 					}
 				}
 			}
@@ -22,7 +22,7 @@ body {
 			.toggle-down {
 				.menu-toggle-btn {
 					span {
-						background-color: $dark-navy;
+						background-color: $navy;
 					}
 				}			
 			}			
@@ -31,14 +31,14 @@ body {
 		.toggle-down {
 			.menu-toggle-btn {
 				span {
-					background-color: $white;
+					// background-color: $white;
 				}
 			}
 
 			&.toggleDrawer {
 				.menu-toggle-btn {
 					span {
-						background-color: $dark-navy;
+						background-color: $navy;
 					}
 				}
 			}

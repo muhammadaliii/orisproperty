@@ -15,7 +15,7 @@ footer {
 
 	h5 {
 		font-size: 1em;
-		color: #b6c4d9;
+		color: $dark-navy;
 		line-height: 150%;
 	}
 
@@ -144,7 +144,7 @@ footer {
 			text-align: center;
 			display: block;
 			color: $footer-background;
-			background-color: $navy;
+			background: $navy;
 			width: 36px;
 			height: 36px;
 			font-size: 1.3em;
@@ -206,7 +206,8 @@ footer {
 
 	.copyright {
 		padding: 12px 0;
-		background-color: $black;
+		background-color: $footer-background-darker;
+		color: #e1e7f1;
 
 		.text-footer {
 			font-size: 0.8em;
