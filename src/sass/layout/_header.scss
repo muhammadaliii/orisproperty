@@ -123,7 +123,7 @@ body {
 			// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
 
 			background-color: rgba($white, 0.5);
-			box-shadow: 0 1px 3px 0 rgba(27,27,27,0.1), 0 4px 8px 0 rgba(27,27,27,0.1);
+			// box-shadow: 0 1px 3px 0 rgba(27,27,27,0.1), 0 4px 8px 0 rgba(27,27,27,0.1);
 			backdrop-filter: saturate(180%) blur(20px);
 
 			&.show-menu {
