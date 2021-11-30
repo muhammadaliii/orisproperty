@@ -181,16 +181,26 @@ body {
 		right: initial;
 		transform: translate(-50%, -50%);
 	
+		@include breakpoint(mobile-iphone) {
+			top: 45%;
+		}
+	
+		@include breakpoint(small-mobile) {
+			top: 38%;
+		}
+	
 		@include breakpoint(tablet) {
 			width: 70%;
 		}
 	
 		@include breakpoint(wide) {
 			width: 50%;
+			top: 46%;
 		}
 	
 		@include breakpoint(desktop) {
 			width: 40%;
+			top: 50%;
 		}
 
 		.advance-area {
@@ -306,6 +316,7 @@ body {
 
 		p {
 			font-size: 0.9em;
+			font-style: italic;
 			
 			@include breakpoint(tablet) {
 				font-size: 1em;
@@ -433,6 +444,7 @@ body {
 
 	.startfrom {
 		font-size: 0.8em;
+		font-style: italic;
 		
 		@include breakpoint(tablet) {
 			font-size: 1em;

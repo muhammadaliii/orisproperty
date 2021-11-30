@@ -42,19 +42,6 @@
 
 	figure {
 		position: relative;
-		height: 0;
-		padding: 0 0 66.7%;
-
-		img {
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
 	}
 
 	.swiper-custom-arrow {
@@ -389,14 +376,17 @@
 	}
 
 	.content {
-		font-size: 15px;
-		line-height: 1.7;
-		word-break: break-word;
-		overflow: hidden;
-		
-		@include breakpoint(tablet) {
-			font-size: 16px;
+		article  {
+			font-size: 15px;
+			line-height: 1.7;
+			word-break: break-word;
+			overflow: hidden;
+			
+			@include breakpoint(tablet) {
+				font-size: 16px;
+			}
 		}
+		
 
 		p {
 			font-size: 1em;
@@ -633,6 +623,7 @@
 
 			p {
 				font-size: 1em;
+				font-style: italic;
 			}
 
 			+ .show-number {

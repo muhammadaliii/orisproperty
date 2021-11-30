@@ -206,6 +206,12 @@ $btn-hover-border-color: transparent;
 		@include breakpoint(desktop) {
 			color: $link-hover-color;
 		}
+
+		.icon-arrow {
+			@include breakpoint(desktop) {
+				background-image: url('../assets/img/icon-chevron-right-blue.png');
+			}
+		}
 	}
 
 	span {
@@ -219,7 +225,7 @@ $btn-hover-border-color: transparent;
 		margin: 0 0 0 4px;
 		width: 18px;
 		height: 18px;
-		background-image: url('../assets/img/icon-chevron-right-blue.png');
+		background-image: url('../assets/img/icon-chevron-right-navy.png');
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: contain;

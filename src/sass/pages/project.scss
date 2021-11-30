@@ -92,6 +92,7 @@
 
 	.startfrom {
 		font-size: 0.8em;
+		font-style: italic;
 		
 		@include breakpoint(tablet) {
 			font-size: 1em;

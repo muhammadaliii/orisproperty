@@ -1,4 +1,10 @@
 .agents-listing {
+	padding-top: 40px;
+	
+	@include breakpoint(tablet) {
+		padding-top: 50px;
+	}
+
 	.agent-list {
 		.row {
 			margin-right: -10px;
@@ -64,6 +70,7 @@
 
 		p {
 			font-size: 0.9em;
+			font-style: italic;
 			
 			@include breakpoint(tablet) {
 				font-size: 1em;

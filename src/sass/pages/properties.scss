@@ -40,11 +40,19 @@ body {
 		flex-wrap: wrap;
 		align-items: center;
 
+		&.side-left {
+			@include breakpoint(small-mobile) {
+				width: 64%;
+			}
+		}
+
 		li {
 			margin: 0;
 
 			+ li {
-				margin-left: 8px;
+				@include breakpoint(tablet) {
+					margin-left: 8px;
+				}
 			}
 		}
 	}
