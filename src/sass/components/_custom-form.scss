@@ -2,17 +2,18 @@
 	.form-control {
 		color: $body-color;
 		font-size: 12px;
-		padding: 0 12px;
+		line-height: 150%;
+		padding: 11px 12px;
 		height: auto;
 		border: 0;
 		background-color: $white;
 		outline: 0;
-		line-height: 40px;
 		border-radius: 30px;
 
 		@include breakpoint(tablet) {
 			font-size: 14px;
-			padding: 0 16px;
+			line-height: 143%;
+			padding: 10px 16px;
 		}
 
 		&.price-currency {
@@ -32,6 +33,7 @@
 		&.form-control {
 			height: 160px;
 			resize: none;
+			border-radius: 20px;
 		}
 	}
 
@@ -55,8 +57,22 @@
 		position: relative;
 		margin: 0;
 
+		label {
+			font-size: 0.8em;
+			
+			@include breakpoint(tablet) {
+				font-size: 0.9em;
+			}
+		}
+
 		&[class*="col-"] {
 			padding: 6px 5px;
+		}
+	}
+
+	.form-row {
+		+ .button-area {
+			margin-top: 20px;
 		}
 	}
 }

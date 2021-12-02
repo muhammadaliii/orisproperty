@@ -26,28 +26,6 @@ $(function() {
 		});
 	});
 
-	// $("#darkmode").change(function() {
-	// 	$("body").toggleClass("theme-dark", this.checked)
-	// }).change();
-
-	// <div id="loader-wrapper">
-	// 	<div id="loader"></div>
-	// 	<span class="logo-loader"></span>
-	// </div>
-
-	// $("body").prepend(
-	// 	'<div id="loader-wrapper">'+
-	// 		'<div id="loader"></div>'+
-	// 		'<span class="logo-loader"></span>'+
-	// 	'</div>'
-	// );
-
-	// $(document).ready(function() {
-	// 	setTimeout(function(){
-	// 		$("#loader-wrapper").remove();
-	// 	}, 4000);
-	// });
-
 	$(".show-number h6").click(function(){
 		$(this).siblings(".number").toggleClass("showing-number").slideToggle("slow");
 	});

@@ -57,6 +57,98 @@
 	}
 }
 
+.wording-content {
+	article  {
+		font-size: 15px;
+		line-height: 1.7;
+		word-break: break-word;
+		overflow: hidden;
+		
+		@include breakpoint(tablet) {
+			font-size: 16px;
+		}
+	}
+
+	h3 {
+		font-size: 1.7em;
+	}
+
+	h4 {
+		font-size: 1.5em;
+	}
+
+	h5 {
+		font-size: 1.3em;
+	}
+	
+	h6 {
+		font-size: 1.1em;
+	}
+
+	h3,
+	h4,
+	h5,
+	h6 {
+		line-height: initial;
+
+		+ h3,
+		+ h4,
+		+ h5,
+		+ h6,
+		+ p,
+		+ ul,
+		+ ol {
+			margin-top: 16px;
+		}
+	}
+	
+
+	p {
+		font-size: 1em;
+		line-height: initial;
+
+		+ h3,
+		+ h4,
+		+ h5,
+		+ h6,
+		+ p,
+		+ ul,
+		+ ol {
+			margin-top: 16px;
+		}
+	}
+
+	ul,
+	ol {
+		padding-left: 24px;
+
+		li {
+			h3,
+			h4,
+			h5,
+			h6 {
+				+ p {
+					margin-top: 0;
+				}
+			}
+
+			+ li {
+				margin-top: 10px;
+			}
+		}
+
+		+ h3,
+		+ h4,
+		+ h5,
+		+ h6,
+		+ p,
+		+ ul,
+		+ ol {
+			margin-top: 16px;
+		}
+	}
+}
+
 .badge-tag {
 	display: inline-block;
 	text-align: center;
@@ -65,7 +157,7 @@
 	color: $white;
 	text-transform: uppercase;
 	letter-spacing: 0.3pt;
-	padding: 7px 10px 6px;
+	padding: 6px 10px;
 	position: absolute;
 	z-index: 1;
 	top: initial;
@@ -77,14 +169,37 @@
 	
 	@include breakpoint(tablet) {
 		font-size: 0.85em;
-		padding: 6px 10px;
 	}
 
-	&.best-deal {
-		bottom: -11px;
-		right: 0;
-		border-top-right-radius: 0;
-		border-bottom-right-radius: 0;
+	&.best-tag,
+	&.sold-tag {
+		width: 64px;
+		height: 64px;
+		padding: 19px 10px;
+		font-size: 0.9em;
+		text-align: center;
+		top: 10px;
+		right: 10px;
+		border-radius: 100%;
+
+		@include breakpoint(tablet) {
+			font-size: 1em;
+			width: 70px;
+			height: 70px;
+			padding: 21px 10px;
+		}
+	}
+
+	&.sold-tag {
+		padding: 25px 10px;
+		top: 50%;
+		right: initial;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		
+		@include breakpoint(tablet) {
+			padding: 28px 10px;
+		}
 	}
 
 	&.tosca {
@@ -497,6 +612,82 @@
 				text-transform: uppercase;
 				bottom: 0;
 				margin-left: 4px;
+			}
+		}
+
+		.price-discount {
+			font-size: 1.5em;
+			text-transform: uppercase;
+			line-height: 100%;
+			position: absolute;
+			margin: 0;
+			bottom: 22px;
+			top: initial;
+			left: initial;
+			right: 16px;
+			color: #99a8bf;
+			
+			@include breakpoint(tablet) {
+				font-size: 1.8em;
+			}
+			
+			@include breakpoint(desktop) {
+				font-size: 2em;
+			}
+
+			span {
+				position: relative;
+				display: inline-block;
+
+				&:before  {
+					content: "";
+					position: absolute;
+					top: 13px;
+					bottom: initial;
+					left: 0;
+					right: 0;
+					width: 100%;
+					height: 2px;
+					background-color: #99a8bf;
+					transform: rotate(-8deg);
+					
+					@include breakpoint(tablet) {
+						height: 3px;
+					}
+				}
+			}
+
+			sup {
+				font-size: 30%;
+				text-transform: uppercase;
+				top: -1.8em;
+				margin-right: 4px;
+			}
+
+			sub {
+				font-size: 30%;
+				text-transform: uppercase;
+				bottom: 0;
+				margin-left: 4px;
+			}
+
+			+ .price {
+				margin-top: 16px;
+			}
+		}
+	}
+
+
+	&.sold {
+		figure {
+			opacity: 0.5;
+		}
+		
+		.badge-tag {
+			opacity: 0.5;
+			
+			&.sold-tag {
+				opacity: 1;
 			}
 		}
 	}

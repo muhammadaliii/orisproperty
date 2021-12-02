@@ -5,38 +5,3 @@
 		padding-top: 50px;
 	}
 }
-
-.wording-content {
-	article  {
-		font-size: 15px;
-		line-height: 1.7;
-		word-break: break-word;
-		overflow: hidden;
-		
-		@include breakpoint(tablet) {
-			font-size: 16px;
-		}
-	}
-	
-
-	p {
-		font-size: 1em;
-		line-height: initial;
-
-		+ p,
-		+ ul,
-		+ ol {
-			margin-top: 16px;
-		}
-	}
-
-	ul,
-	ol {
-		padding-left: 24px;
-
-		+ ul,
-		+ ol {
-			margin-top: 16px;
-		}
-	}
-}

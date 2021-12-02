@@ -1,0 +1,119 @@
+.join-view {
+	padding-top: 40px;
+	
+	@include breakpoint(tablet) {
+		padding-top: 50px;
+	}
+
+	.wrapper {
+		text-align: center;
+	}
+
+	.join-content {
+		&.fixed {
+			padding-top: 39px;
+
+			.nav {
+				position: fixed;
+				z-index: 2;
+				top: 60px;
+				left: 16px;
+				right: 16px;
+				bottom: initial;
+				background-color: rgba($white, 0.5);
+				backdrop-filter: saturate(180%) blur(20px);
+				box-shadow: 2px 4px 20px rgba(0,0,0,0.15);
+
+				@include breakpoint(tablet) {
+					top: 74px;
+					left: 50%;
+					right: initial;
+					transform: translate(-50%, 0);
+				}
+			}
+		}
+	}
+
+	.nav {
+		padding: 2px;
+		flex-wrap: nowrap;
+		background-color: $footer-background;
+		z-index: 2;
+		border-radius: 30px;
+		
+		@include breakpoint(tablet) {
+			display: inline-flex;
+			flex-wrap: wrap;
+		}
+
+		.nav-item {
+			width: 100%;
+			display: inline-block;
+			
+			@include breakpoint(tablet) {
+				width: auto;
+			}
+		}
+
+		.nav-link {
+			white-space: nowrap;
+			border-radius: 30px;
+
+			&.active {
+				background-color: $blue;
+				color: $white;
+			}
+		}
+
+		+ .tab-content {
+			margin-top: 30px;
+		}
+	}
+
+	.content-tab {
+		text-align: left;
+	}
+
+	.wording-content {
+		+ .form-content {
+			margin-top: 40px;
+		}
+	}
+	
+	.form-content {
+		.form {
+			padding: 30px 20px;
+			border-radius: 30px;
+			background-color: $navy;
+			
+			@include breakpoint(tablet) {
+				padding: 40px 30px;
+			}
+
+			label {
+				color: $white;
+			}
+
+			.button {
+				background-color: $blue;
+				border-color: $blue;
+				width: 100%;
+				
+				@include breakpoint(tablet) {
+					width: auto;
+				}
+
+				&:hover {
+					@include breakpoint(desktop) {
+						background-color: $dark-blue;
+						border-color: $dark-blue;
+					}
+				}
+			}
+
+			.invalid-feedback {
+				color: #f9a5a5;
+			}
+		}
+	}
+}

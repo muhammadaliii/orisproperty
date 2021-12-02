@@ -139,7 +139,6 @@
 		slidesPerView: 'auto',
 		autoHeight: true,
 		effect: 'coverflow',
-		// loop: true,
 		loop: false,
 		loopFillGroupWithBlank: true,
 		navigation: {
@@ -167,56 +166,5 @@
 			},
 		},
 	});
-
-
-
-	function nFormatter(num, digits) {
-		var si = [
-			{ value: 1, symbol: "" },
-			{ value: 1E3, symbol: "K" },
-			{ value: 1E6, symbol: "Juta" },
-			{ value: 1E9, symbol: "Milyar" },
-			{ value: 1E12, symbol: "Triliyun" },
-			{ value: 1E15, symbol: "P" },
-			{ value: 1E18, symbol: "E" }
-		];
-		var rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
-		var i;
-		for (i = si.length - 1; i > 0; i--) {
-			if (num >= si[i].value) {
-				break;
-			}
-		}
-		return (num / si[i].value).toFixed(digits).replace(rx, "$1") + si[i].symbol;
-	}
-
-	/*
-	 * Tests
-	 */
-	var tests = [
-		{ num: 4650000000, digits: 3 },
-		// { num: 1234, digits: 1 },
-		// { num: 100000000, digits: 1 },
-		// { num: 3450000000, digits: 3 },
-		// { num: 3612000000, digits: 4 },
-		// { num: 75987800000000, digits: 2 },
-		// { num: 123, digits: 1 },
-		// { num: 123.456, digits: 1 },
-		// { num: 123.456, digits: 2 },
-		// { num: 123.456, digits: 4 }
-	];
-	var i;
-	if ($('.test').length > 0) {
-		
-		for (i = 0; i < tests.length; i++) {
-			$('.test').find(".digit").text(nFormatter(tests[i].num)).addClass("masuk");
-			// console.log('this: ', $(this));
-			console.log("nFormatter(" + tests[i].num + ", " + tests[i].digits + ") = " + nFormatter(tests[i].num, tests[i].digits));
-		}
-
-	}
-
-
-
 
 })(jQuery);

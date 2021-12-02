@@ -27,12 +27,26 @@ function stickyClass() {
 	});
 }
 
+function stickyNavbar() {
+	$(window).scroll(function(event){
+		var scroll = $(window).scrollTop();
+		
+		$('.join-content').toggleClass('fixed',
+			scroll >= $('.join-content').offset().top - 54
+		);
+	});
+}
+
 $(function() {
 	$(document).ready(function () {
 		stickyHeader();
 
 		if ($('.share-contact').length > 0) {
 			stickyClass();
+		}
+
+		if ($('.join-content').length > 0) {
+			stickyNavbar();
 		}
 	});
 

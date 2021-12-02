@@ -336,3 +336,56 @@ body>.jcf-select-drop {
 		}
 	}
 }
+
+.jcf-file {
+	font-size: 12px;
+	display: block;
+	position: relative;
+	white-space: nowrap;
+	overflow: hidden;
+	
+	@include breakpoint(tablet) {
+		font-size: 14px;
+	}
+
+	.jcf-fake-input {
+		display: block;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		padding: 5px 110px 5px 12px;
+		line-height: 30px;
+		background-color: $white;
+		border-radius: 30px;
+
+		@include breakpoint(tablet) {
+			padding: 5px 122px 5px 16px;
+		}
+	}
+
+	.jcf-upload-button {
+		position: absolute;
+		top: 0;
+		bottom: initial;
+		left: initial;
+		right: 0;
+		vertical-align: top;
+		white-space: nowrap;
+		overflow: hidden;
+		padding: 5px 16px;
+		line-height: 30px;
+		height: 40px;
+		border-left: 1px solid $body-color;
+		background-color: $footer-background;
+		border-radius: 0 30px 30px 0;
+	}
+
+	.jcf-real-element {
+		position: absolute;
+		height: 100%;
+		margin: 0;
+		right: 0;
+		top: 0;
+		cursor: pointer;
+	}
+}
