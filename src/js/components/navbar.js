@@ -31,8 +31,8 @@ function stickyNavbar() {
 	$(window).scroll(function(event){
 		var scroll = $(window).scrollTop();
 		
-		$('.join-content').toggleClass('fixed',
-			scroll >= $('.join-content').offset().top - 54
+		$('.with-sticky-nav').toggleClass('fixed',
+			scroll >= $('.with-sticky-nav').offset().top - 54
 		);
 	});
 }
@@ -45,7 +45,7 @@ $(function() {
 			stickyClass();
 		}
 
-		if ($('.join-content').length > 0) {
+		if ($('.with-sticky-nav').length > 0) {
 			stickyNavbar();
 		}
 	});

@@ -120,13 +120,16 @@
 		},
 	});
 
-	$('a[data-toggle="tab"]').on('shown.bs.tab', function () {
+	$('#join-tab a[data-toggle="tab"]').on('hidden.bs.tab', function () {
 		formProject.resetForm();
 		formFranchise.resetForm();
 		formTeam.resetForm();
 		$('#join-tabContent input, #join-tabContent input[type="file"]').val('');
+	});
+
+	$('a[data-toggle="tab"]').on('shown.bs.tab', function () {
 		localStorage.setItem('lastTab', $(this).attr('href'));
-	})
+	});
 
 	var lastTab = localStorage.getItem('lastTab');
 	if (lastTab) {
