@@ -63,8 +63,20 @@
 			h6 {
 				font-size: 1.1em;
 
+				span {
+					vertical-align: middle;
+				}
+
 				+ h6 {
 					margin-top: 4px;
+				}
+			}
+
+			.icon {
+				font-size: 1.3em;
+
+				+ span {
+					margin-left: 4px;
 				}
 			}
 
