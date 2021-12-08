@@ -22,20 +22,11 @@ function stickyClass() {
 		var scroll = $(window).scrollTop();
 		
 		$('.share-contact').toggleClass('hiding',
-			scroll >= $('.join-team').offset().top - 54
+			scroll >= $('footer').offset().top - 54
 		);
 	});
 }
 
-function stickyNavbar() {
-	$(window).scroll(function(event){
-		var scroll = $(window).scrollTop();
-		
-		$('.with-sticky-nav').toggleClass('fixed',
-			scroll >= $('.with-sticky-nav').offset().top - 54
-		);
-	});
-}
 
 $(function() {
 	$(document).ready(function () {
@@ -43,10 +34,6 @@ $(function() {
 
 		if ($('.share-contact').length > 0) {
 			stickyClass();
-		}
-
-		if ($('.with-sticky-nav').length > 0) {
-			stickyNavbar();
 		}
 	});
 

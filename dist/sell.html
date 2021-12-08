@@ -7,7 +7,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="robots" content="index, follow" />
-		<title>{{ head_title }} • Oris Property</title>
+		<title>Sell With Us • Oris Property</title>
 		<meta name="description" content="PT. Oris Haza Propertindo Real Estate Agent in South Jakarta.">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -37,7 +37,7 @@
 		<meta name="theme-color" content="#ffffff">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
-	<body{% if body_class is defined and body_class is not empty %} class="{{ body_class }}" id="{{ body_class }}" {% endif %}>
+	<body class="sell-page" id="sell-page" >
 		<header class="header-fix">
 			<div class="container-fluid">
 				<nav class="header-menu">
@@ -128,7 +128,106 @@
 			</div>
 		</header>
 		<main>
-{% block page %}{% endblock %}
+			<section class="sell-view">
+				<div class="container">
+					<div class="title-page">
+						<h4 class="font-text-bold" data-aos="fade-right">Sell With Us</h4>
+					</div>
+					<div class="sell-content">
+						<div class="wrapper" data-aos="fade-up">
+							<div class="wording-content">
+								<article>
+									<h5>
+										<strong>Franchise Opportunities</strong>
+									</h5>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									</p>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									</p>
+									<h6>
+										<strong>Benefit :</strong>
+									</h6>
+									<ul>
+										<li>
+											<h6>
+												<strong>Benefit 1</strong>
+											</h6>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+										</li>
+										<li>
+											<h6>
+												<strong>Benefit 2</strong>
+											</h6>
+											<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+										</li>
+										<li>
+											<h6>
+												<strong>Benefit 3</strong>
+											</h6>
+											<p>Excepteur sint occaecat cupidatat non proident</p>
+										</li>
+										<li>
+											<h6>
+												<strong>Benefit 4</strong>
+											</h6>
+											<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+										</li>
+										<li>
+											<h6>
+												<strong>Benefit 5</strong>
+											</h6>
+											<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+										</li>
+									</ul>
+									<p>Untuk informasi lebih lengkap, silahkan isi Form Aplikasi di bawah ini:</p>
+								</article>
+							</div>
+							
+							<div class="form-content" data-aos="fade-up">
+								<form action="" class="form" id="form-franchise">
+									<div class="form-row">
+										<div class="form-group col-6">
+											<label for="name-input-franchise">Name</label>
+											<input type="text" class="form-control" id="name-input-franchise" name="name" placeholder="Name" required>
+										</div>
+										<div class="form-group col-6">
+											<label for="email-input-franchise">Email</label>
+											<input type="email" class="form-control" id="email-input-franchise" name="email" placeholder="Email Address" required>
+										</div>
+										<div class="form-group col-6">
+											<label for="phone-input-franchise">Phone</label>
+											<input type="number" class="form-control" id="phone-input-franchise" name="phone" placeholder="Phone Number" required>
+										</div>
+										<div class="form-group col-6">
+											<label for="subject-input-franchise">Subject</label>
+											<input type="text" class="form-control" id="subject-input-franchise" name="subject" placeholder="Subject" required>
+										</div>
+										<div class="form-group col-12">
+											<label for="message-input-franchise">Message</label>
+											<textarea class="form-control" id="message-input-franchise" name="message" placeholder="Massage" required></textarea>
+										</div>
+									</div>
+									<div class="button-area">
+										<button class="button full-width full-rounded font-text-bold" type="submit">Submit</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 			<div class="modal fade" id="modal-search" tabindex="-1" role="dialog" aria-labelledby="modal-search-title" aria-hidden="true">
 				<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
 					<div class="modal-content">
@@ -305,8 +404,140 @@
 				<span class="logo-loader"></span>
 			</div>
 		</main>
-{% include '../partials/footer.twig' %}
-		<script src="js/vendor.js"></script>
+		<footer id="footer">
+			<div class="nav-top">
+				<div class="container">
+					<div class="footer-wrapper">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="row">
+									<div class="col-lg-6 margin-top" data-aos="zoom-in">
+										<div class="footer-logo">
+											<a href="index.html">
+												<figure>
+													<img src="assets/img/logo.png" alt="PT. Oris Haza Propertindo">
+												</figure>
+											</a>
+											<h5 class="subtitle-footer font-text-bold">PT. Oris Haza Propertindo</h5>
+										</div>
+										<div class="address">
+											<address>
+												Jl. Cipaku I/16, Kebayoran Baru<br>
+												Jakarta Selatan
+											</address>
+										</div>
+									</div>
+									<div class="col-lg-6 margin-top" data-aos="zoom-in">
+										<div class="contact-phone">
+											<h5 class="subtitle-footer font-text-bold">Contact</h5>
+											<ul class="content-list phone">
+												<li>
+													<h6>
+														<a href="tel:+6281289831983" target="_blank">
+															+62 812 8983 1983
+														</a>
+													</h6>
+												</li>
+												<li>
+													<h6>
+														<a href="mailto:cs@orisproperty.com" target="_blank">
+															cs@orisproperty.com
+														</a>
+													</h6>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="row">
+									<div class="col-lg-7 margin-top" data-aos="zoom-in">
+										<div class="sitemap">
+											<h5 class="subtitle-footer font-text-bold">Quick Links</h5>
+											<div class="content-list row">
+												<div class="col-md-6">
+													<h6>
+														<a href="index.html">Home</a>
+													</h6>
+												</div>
+												<div class="col-md-6">
+													<h6>
+														<a href="about.html">About</a>
+													</h6>
+												</div>
+												<div class="col-md-6">
+													<h6>
+														<a href="properties.html">Properties</a>
+													</h6>
+												</div>
+												<div class="col-md-6">
+													<h6>
+														<a href="sell.html">Sell With Us</a>
+													</h6>
+												</div>
+												<div class="col-md-6">
+													<h6>
+														<a href="project.html">New Project</a>
+													</h6>
+												</div>
+												<div class="col-md-6">
+													<h6>
+														<a href="join.html">Join Us</a>
+													</h6>
+												</div>
+												<div class="col-md-6">
+													<h6>
+														<a href="video.html">Videos</a>
+													</h6>
+												</div>
+												<div class="col-md-6">
+													<h6>
+														<a href="agents.html">Agents</a>
+													</h6>
+												</div>
+												<div class="col-md-6">
+													<h6>
+														<a href="contact.html">Contact Us</a>
+													</h6>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-5 margin-top" data-aos="zoom-in">
+										<div class="social-media">
+											<h5 class="subtitle-footer font-text-bold">Get In Touch</h5>
+											<ul class="content-list social flat">
+												<li class="instagram">
+													<a href="https://www.instagram.com/orisproperty/" target="_blank">
+														<i class="fab fa-instagram"></i>
+													</a>
+												</li>
+												<li class="instagram">
+													<a href="https://www.instagram.com/haza_property//" target="_blank">
+														<i class="fab fa-instagram"></i>
+													</a>
+												</li>
+												<li class="youtube">
+													<a href="https://www.youtube.com/channel/UCBprgXIEQygNV7BVsafVyTg" target="_blank">
+														<i class="fab fa-youtube"></i>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				<div class="container text-center">
+					<p class="text-footer">Copyright © 2021 PT. Oris Haza Propertindo. All Rights Reserved.</p>
+				</div>
+			</div>
+		</footer>		<script src="js/vendor.js"></script>
 		<script src="js/bootstrap.js"></script>
 		<script src="js/main.min.js"></script>
 		<script>

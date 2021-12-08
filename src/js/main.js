@@ -17,29 +17,22 @@ $(function() {
 	$(document).ready(function(){
 		$(this).scrollTop(0);
 		
-		$('.price-currency').inputmask({
-			prefix: "Rp",
-			groupSeparator: ".",
-			alias: "numeric",
-			digits: 0,
-			removeMaskOnSubmit: true,
-		});
-	});
-
-	$(".show-number h6").click(function(){
-		$(this).siblings(".number").toggleClass("showing-number").slideToggle("slow");
-	});
-
-
-	var targetLoader = $("#loader-wrapper");
-
-	$(window).on("load", function() {
-		setTimeout( function(){
-			targetLoader.fadeOut("slow", function(){
-				targetLoader.remove();
+		if ($('.price-currency').length > 0) {
+			$('.price-currency').inputmask({
+				prefix: "Rp",
+				groupSeparator: ".",
+				alias: "numeric",
+				digits: 0,
+				removeMaskOnSubmit: true,
 			});
-		},200);
+		}
 	});
+
+	if ($('.show-number').length > 0) {
+		$(".show-number h6").click(function(){
+			$(this).siblings(".number").toggleClass("showing-number").slideToggle("slow");
+		});
+	}
 
 	setTimeout(function(){
 		progressively.init({
@@ -63,14 +56,20 @@ $(function() {
 		});
 	}, 800);
 
+	var targetLoader = $("#loader-wrapper");
+
+	$(window).on("load", function() {
+		setTimeout( function(){
+			targetLoader.fadeOut("slow", function(){
+				targetLoader.remove();
+			});
+		},300);
+	});
+
 	$(window).on('resize', function(){
 		AOS.refresh();
 	});
 });
-
-// $(function() {
-// 	$("#loader-wrapper").fadeOut("slow");;
-// });
 
 $(window).smartresize(function() {
 	// Debouncing function from John Hann
