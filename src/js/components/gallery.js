@@ -11,7 +11,7 @@
 
 	$('.detail-avatar .video-area').lightGallery({
 		thumbnail: true,
-		animateThumb: false,
+		animateThumb: true,
 		showThumbByDefault: false,
 		exThumbImage: 'data-exthumbimage',
 		selector: '.selector',
@@ -24,7 +24,7 @@
 
 	$('.video-listing').lightGallery({
 		thumbnail: true,
-		animateThumb: false,
+		animateThumb: true,
 		showThumbByDefault: false,
 		exThumbImage: 'data-exthumbimage',
 		selector: '.selector',

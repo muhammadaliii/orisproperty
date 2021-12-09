@@ -1,5 +1,5 @@
 #lg-counter {
-	font-family: 'cinzel_bold';
+	font-family: 'montserrat_medium';
 }
 
 .lg-toolbar {
@@ -42,7 +42,12 @@
 			vertical-align: middle;
 			margin-bottom: 0;
 			max-height: 100px;
-			border-radius: 0;
+			border-radius: 10px;
+
+			&.active,
+			&:hover {
+				border-color: $blue;
+			}
 
 			&:last-child {
 				margin-right: 0!important;
@@ -69,6 +74,12 @@
 		.lg-prev {
 			left: 4px;
 		}
+	}
+}
+
+.lg-progress-bar {
+	.lg-progress {
+		background-color: $blue;
 	}
 }
 
