@@ -6,6 +6,11 @@
 $(function() {
 	// Document Ready
 
+	var targetLoader = $("#loader-wrapper");
+	targetLoader.fadeOut("slow", function(){
+		targetLoader.remove();
+	});
+
 	jcf.setOptions('Select', {
 		wrapNative: true
 	});
@@ -55,16 +60,6 @@ $(function() {
 			easing: 'linear',
 		});
 	}, 800);
-
-	var targetLoader = $("#loader-wrapper");
-
-	$(window).on("load", function() {
-		setTimeout( function(){
-			targetLoader.fadeOut("slow", function(){
-				targetLoader.remove();
-			});
-		},300);
-	});
 
 	$(window).on('resize', function(){
 		AOS.refresh();
