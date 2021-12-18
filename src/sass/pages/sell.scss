@@ -11,36 +11,56 @@
 			margin-top: 40px;
 		}
 	}
-	
-	.form-content {
-		.form {
-			padding: 30px 20px;
-			border-radius: 30px;
-			background-color: $navy;
-			
-			@include breakpoint(tablet) {
-				padding: 40px 30px;
-			}
 
-			label {
+	.form {
+		fieldset {
+			background-color: $white;
+			box-shadow: 2px 4px 20px rgba($black, 0.15);
+
+			& > legend {
 				color: $white;
-			}
-
-			.button {
 				background-color: $blue;
-				border-color: $blue;
-
-				&:hover {
-					@include breakpoint(desktop) {
-						background-color: $dark-blue;
-						border-color: $dark-blue;
-					}
-				}
+				border-radius: 30px;
 			}
+		}
 
-			.invalid-feedback {
-				color: #f9a5a5;
+		.form-check {
+			padding: 5px 0;
+		}
+
+		.jcf-select,
+		.form-control {
+			background-color: #e6eefb;
+		}
+
+		.jcf-radio,
+		.jcf-checkbox {
+			border: 0;
+			background-color: #e6eefb;
+
+			&.jcf-checked {
+				background-color: $blue;
 			}
+		}
+
+		.jcf-radio {
+			span {
+				background-color: $white;
+				top: 4px;
+				bottom: 4px;
+				left: 4px;
+				right: 4px;
+			}
+		}
+
+		.jcf-checkbox {
+			span {
+				border-color: $white;
+			}
+		}
+
+		.invalid-feedback {
+			color: $red;
 		}
 	}
 }

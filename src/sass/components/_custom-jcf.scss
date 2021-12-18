@@ -25,13 +25,16 @@
 	}
 
 	.jcf-select-text {
+		font-size: 12px;
+		font-family: 'montserrat_medium';
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		line-height: 40px;
+		color: $body-color;
 		margin: 0;
 		cursor: pointer;
-		color: $body-color;
-		font-size: 12px;
-		line-height: 40px;
 		display: block;
-		font-family: 'montserrat_medium';
 		
 		@include breakpoint(tablet) {
 			font-size: 14px;
@@ -127,14 +130,56 @@ body>.jcf-select-drop {
 }
 
 .jcf-checkbox {
-	border-color: $yellow;
+	vertical-align: middle;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	cursor: default;
+	background: #fff;
+	border: 1px solid $navy;
+	margin: 0 3px 0 0;
+	height: 16px;
+	width: 16px;
+	border-radius: 4px;
 
-	span {
-		height: 5px;
+	span{
+		position: absolute;
+		display: none;
+		height: 6px;
 		width: 10px;
-		border-color: $black;
-		border-width: 0px 0px 1px 1px;
+		top: 50%;
+		left: 50%;
+		margin: -7px 0 0 -6px;
+		border: 1px solid $blue;
+		border-width: 0 0 2px 2px;
+		-moz-transform: rotate(-45deg);
+		-ms-transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+		transform: rotate(-45deg);
+		-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865483, M12=0.7071067811865467, M21=-0.7071067811865467, M22=0.7071067811865483, SizingMethod='auto expand')";
 	}
+
+	input[type="checkbox"] {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		border: 0;
+		margin: 0;
+		left: 0;
+		top: 0;
+	}
+
+	&.jcf-checked {
+		border-color: $blue;
+
+		span{
+			display: block;
+		}
+	}
+}
+
+:root .jcf-checkbox span {
+	margin:-4px 0 0 -5px;
 }
 
 .checkbox {
@@ -179,8 +224,65 @@ body>.jcf-select-drop {
 }
 
 .jcf-radio {
-	display: none;
+	vertical-align: middle;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	cursor: default;
+	background: #fff;
+	border: 1px solid $navy;
+	border-radius: 9px;
+	margin: 0 3px 0 0;
+	height: 16px;
+	width: 16px;
+
+	span{
+		display: none;
+		position: absolute;
+		top: 3px;
+		left: 3px;
+		right: 3px;
+		bottom: 3px;
+		background-color: $blue;
+		border-radius: 100%;
+	}
+
+	input[type="radio"] {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		border: 0;
+		margin: 0;
+		left: 0;
+		top: 0;
+	}
+
+	&.jcf-checked {
+		border-color: $blue;
+
+		span {
+			display: block;
+		}
+	}
+
+	& + label {
+		font-size: 12px;
+		
+		@include breakpoint(tablet) {
+			font-size: 14px;
+		}
+	}
 }
+
+.jcf-radio,
+.jcf-checkbox {
+	cursor: pointer;
+
+	& + label {
+		cursor: pointer;
+	}
+}
+
 
 .radio-button {
 	.label-button {
