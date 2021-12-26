@@ -68,7 +68,7 @@ ol {
 	margin: 0;
 
 	&.flat {
-		li {
+		& > li {
 			display: inline-block;
 			margin: 0 8px 0 0;
 		}

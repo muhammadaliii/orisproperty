@@ -7,7 +7,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="robots" content="index, follow" />
-		<title>{{ head_title }} • Oris Property</title>
+		<title>Success • Oris Property</title>
 		<meta name="description" content="PT. Oris Haza Propertindo Real Estate Agent in South Jakarta.">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -37,7 +37,7 @@
 		<meta name="theme-color" content="#ffffff">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
-	<body{% if body_class is defined and body_class is not empty %} class="{{ body_class }}" id="{{ body_class }}" {% endif %}>
+	<body class="success-page" id="success-page" >
 		<header class="header-fix">
 			<div class="container-fluid">
 				<nav class="header-menu">
@@ -128,7 +128,23 @@
 			</div>
 		</header>
 		<main>
-{% block page %}{% endblock %}
+			<section class="not-found">
+				<div class="container">
+					<div class="title-not-found">
+						<!-- <h4 class="font-text-black" data-aos="zoom-in">Oops!</h4> -->
+						<h4 class="font-text-black" data-aos="zoom-in">Yay!</h4>
+					</div>
+					<div class="content-not-found">
+						<div class="text-area">
+							<h5 class="font-text-bold" data-aos="zoom-in">Form Success</h5>
+							<p data-aos="zoom-in">Thank you for your submission, we will call you back later.</p>
+						</div>
+						<div class="button-area" data-aos="zoom-in">
+							<a href="index.html" class="button full-rounded font-text-bold">Go to Homepage</a>
+						</div>
+					</div>
+				</div>
+			</section>
 			<div class="modal fade" id="modal-search" tabindex="-1" role="dialog" aria-labelledby="modal-search-title" aria-hidden="true">
 				<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
 					<div class="modal-content">
@@ -306,8 +322,140 @@
 				<span class="logo-loader"></span>
 			</div>
 		</main>
-{% include '../partials/footer.twig' %}
-		<script src="js/vendor.js"></script>
+		<footer id="footer">
+			<div class="nav-top">
+				<div class="container">
+					<div class="footer-wrapper">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="row">
+									<div class="col-lg-6 margin-top" data-aos="zoom-in">
+										<div class="footer-logo">
+											<a href="index.html">
+												<figure>
+													<img src="assets/img/logo.png" alt="PT. Oris Haza Propertindo">
+												</figure>
+											</a>
+											<h5 class="subtitle-footer font-text-bold">PT. Oris Haza Propertindo</h5>
+										</div>
+										<div class="address">
+											<address>
+												Jl. Cipaku I/16, Kebayoran Baru<br>
+												Jakarta Selatan
+											</address>
+										</div>
+									</div>
+									<div class="col-lg-6 margin-top" data-aos="zoom-in">
+										<div class="contact-phone">
+											<h5 class="subtitle-footer font-text-bold">Contact</h5>
+											<ul class="content-list phone">
+												<li>
+													<h6>
+														<a href="tel:+6281289831983" target="_blank">
+															+62 812 8983 1983
+														</a>
+													</h6>
+												</li>
+												<li>
+													<h6>
+														<a href="mailto:cs@orisproperty.com" target="_blank">
+															cs@orisproperty.com
+														</a>
+													</h6>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="row">
+									<div class="col-lg-7 margin-top" data-aos="zoom-in">
+										<div class="sitemap">
+											<h5 class="subtitle-footer font-text-bold">Quick Links</h5>
+											<div class="content-list row">
+												<div class="col-md-6">
+													<h6>
+														<a href="index.html">Home</a>
+													</h6>
+												</div>
+												<div class="col-md-6">
+													<h6>
+														<a href="about.html">About</a>
+													</h6>
+												</div>
+												<div class="col-md-6">
+													<h6>
+														<a href="properties.html">Properties</a>
+													</h6>
+												</div>
+												<div class="col-md-6">
+													<h6>
+														<a href="sell.html">Sell With Us</a>
+													</h6>
+												</div>
+												<div class="col-md-6">
+													<h6>
+														<a href="project.html">New Project</a>
+													</h6>
+												</div>
+												<div class="col-md-6">
+													<h6>
+														<a href="join.html">Join Us</a>
+													</h6>
+												</div>
+												<div class="col-md-6">
+													<h6>
+														<a href="video.html">Videos</a>
+													</h6>
+												</div>
+												<div class="col-md-6">
+													<h6>
+														<a href="agents.html">Agents</a>
+													</h6>
+												</div>
+												<div class="col-md-6">
+													<h6>
+														<a href="contact.html">Contact Us</a>
+													</h6>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-5 margin-top" data-aos="zoom-in">
+										<div class="social-media">
+											<h5 class="subtitle-footer font-text-bold">Get In Touch</h5>
+											<ul class="content-list social flat">
+												<li class="instagram">
+													<a href="https://www.instagram.com/orisproperty/" target="_blank">
+														<i class="fab fa-instagram"></i>
+													</a>
+												</li>
+												<li class="instagram">
+													<a href="https://www.instagram.com/haza_property//" target="_blank">
+														<i class="fab fa-instagram"></i>
+													</a>
+												</li>
+												<li class="youtube">
+													<a href="https://www.youtube.com/channel/UCBprgXIEQygNV7BVsafVyTg" target="_blank">
+														<i class="fab fa-youtube"></i>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				<div class="container text-center">
+					<p class="text-footer">Copyright © 2021 PT. Oris Haza Propertindo. All Rights Reserved.</p>
+				</div>
+			</div>
+		</footer>		<script src="js/vendor.js"></script>
 		<script src="js/bootstrap.js"></script>
 		<script src="js/main.min.js"></script>
 		<script>

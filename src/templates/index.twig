@@ -91,7 +91,8 @@
 								<div class="input-search">
 									<div class="input-wrapper">
 										<span class="icon fa fa-map-marker-alt"></span>
-										<input type="text" class="form-control simple-search" placeholder="Search City...">
+										<input type="text" name="input_city" class="form-control simple-search"  id="home-search" placeholder="Search City..." autocomplete="off">
+										<input type="hidden" name="input_city_hidden" id="home-search-hidden">
 										<div class="button-search-area">
 											<button type="button" class="advance-search font-text-medium" data-toggle="collapse" data-target="#advance-area" aria-expanded="false" aria-controls="advance-area">
 												Advance
@@ -723,16 +724,4 @@
 					</div>
 				</div>
 			</section>
-
-			{# <section class="code-test">
-				<div class="container">
-					<div class="test">
-						<h4 id="price-number">
-							<span id="nominal" class="nominal">12000000000000 /</span>
-							<span id="digit" class="digit">Masdsd</span>
-						</h4>
-					</div>
-				</div>
-			</section> #}
-
 {% endblock %}

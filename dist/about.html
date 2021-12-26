@@ -237,7 +237,8 @@
 									<div class="input-search">
 										<div class="input-wrapper">
 											<span class="icon fa fa-map-marker-alt"></span>
-											<input type="text" class="form-control simple-search" placeholder="Search City...">
+											<input type="text" name="global_input_city" class="form-control simple-search" id="global-search" placeholder="Search City...">
+											<input type="hidden" name="global_input_city_hidden" class="form-control simple-search" id="global-search-hidden" placeholder="Search City...">
 											<div class="button-search-area">
 												<button type="button" class="advance-search font-text-medium" data-toggle="collapse" data-target="#advance-global-area" aria-expanded="false" aria-controls="advance-area">
 													Advance
@@ -529,47 +530,185 @@
 		<script src="js/bootstrap.js"></script>
 		<script src="js/main.min.js"></script>
 		<script>
-			function nFormatter(num, digits) {
-				var si = [
-					{ value: 1, symbol: "" },
-					{ value: 1E3, symbol: "K" },
-					{ value: 1E6, symbol: "Juta" },
-					{ value: 1E9, symbol: "Milyar" },
-					{ value: 1E12, symbol: "Triliyun" },
-					{ value: 1E15, symbol: "P" },
-					{ value: 1E18, symbol: "E" }
-				];
-				var rx = /\.0+$|(\.[0-9]*[1-9])0+$/;
-				var i;
-				for (i = si.length - 1; i > 0; i--) {
-					if (num >= si[i].value) {
-						break;
-					}
-				}
-				return (num / si[i].value).toFixed(digits).replace(rx, "$1") + si[i].symbol;
+			function globalSearch() {
+				var options = {
+
+					// url: "resources/heroes.json",
+					
+					data: {
+						"city": [
+							{"idCity": "1", "cityName": "Jakarta", "provinceName": "DKI Jakarta"},
+							{"idCity": "2", "cityName": "Bandung", "provinceName": "Jawa Barat"},
+							{"idCity": "3", "cityName": "Surabaya", "provinceName": "Jawa Timur"},
+							{"idCity": "4", "cityName": "Bekasi", "provinceName": "Jawa Barat"},
+							{"idCity": "5", "cityName": "Semarang", "provinceName": "Jawa Tengah"},
+							{"idCity": "6", "cityName": "Denpasar", "provinceName": "Bali"},
+							{"idCity": "7", "cityName": "Tanggerang", "provinceName": "Banten"},
+							{"idCity": "8", "cityName": "Jogja", "provinceName": "Jawa Tengah"},
+							{"idCity": "9", "cityName": "Cianjur", "provinceName": "Jawa Barat"},
+							{"idCity": "10", "cityName": "Palembang", "provinceName": "Sumatera Selatan"},
+						],
+					},
+
+					categories: [
+						{
+							listLocation: "city",
+							maxNumberOfElements: 10,
+						},
+					],
+
+					getValue: function(element) {
+						return element.cityName;
+					},
+
+					template: {
+						type: "description",
+						fields: {
+							description: "provinceName"
+						}
+					},
+
+					list: {
+						maxNumberOfElements: 10,
+						match: {
+							enabled: true
+						},
+						sort: {
+							enabled: true
+						},
+						onSelectItemEvent: function() {
+							var value = $("#global-search").getSelectedItemData().idCity;
+
+							$("#global-search-hidden").val(value).trigger("change");
+						}
+					},
+
+				};
+
+				$('#global-search').easyAutocomplete(options);
 			}
 
-			var tests = [
-				{ num: 4650000000, digits: 3 },
-				// { num: 1234, digits: 1 },
-				// { num: 100000000, digits: 1 },
-				// { num: 3450000000, digits: 3 },
-				// { num: 3612000000, digits: 4 },
-				// { num: 75987800000000, digits: 2 },
-				// { num: 123, digits: 1 },
-				// { num: 123.456, digits: 1 },
-				// { num: 123.456, digits: 2 },
-				// { num: 123.456, digits: 4 }
-			];
-			var i;
-			if ($('.test').length > 0) {
-				
-				for (i = 0; i < tests.length; i++) {
-					$('.test').find(".digit").text(nFormatter(tests[i].num)).addClass("masuk");
-					console.log("nFormatter(" + tests[i].num + ", " + tests[i].digits + ") = " + nFormatter(tests[i].num, tests[i].digits));
-				}
+			function homeSearch() {
+				var options = {
+					
+					// url: "resources/heroes.json",
 
+					data: {
+						"city": [
+							{"idCity": "1", "cityName": "Jakarta", "provinceName": "DKI Jakarta"},
+							{"idCity": "2", "cityName": "Bandung", "provinceName": "Jawa Barat"},
+							{"idCity": "3", "cityName": "Surabaya", "provinceName": "Jawa Timur"},
+							{"idCity": "4", "cityName": "Bekasi", "provinceName": "Jawa Barat"},
+							{"idCity": "5", "cityName": "Semarang", "provinceName": "Jawa Tengah"},
+							{"idCity": "6", "cityName": "Denpasar", "provinceName": "Bali"},
+							{"idCity": "7", "cityName": "Tanggerang", "provinceName": "Banten"},
+							{"idCity": "8", "cityName": "Jogja", "provinceName": "Jawa Tengah"},
+							{"idCity": "9", "cityName": "Cianjur", "provinceName": "Jawa Barat"},
+							{"idCity": "10", "cityName": "Palembang", "provinceName": "Sumatera Selatan"}
+						],
+					},
+
+					categories: [
+						{
+							listLocation: "city",
+							maxNumberOfElements: 10,
+						},
+					],
+
+					getValue: function(element) {
+						return element.cityName;
+					},
+
+					template: {
+						type: "description",
+						fields: {
+							description: "provinceName"
+						}
+					},
+
+					list: {
+						maxNumberOfElements: 10,
+						match: {
+							enabled: true
+						},
+						sort: {
+							enabled: true
+						},
+						onSelectItemEvent: function() {
+							var value = $("#home-search").getSelectedItemData().idCity;
+
+							$("#home-search-hidden").val(value).trigger("change");
+						}
+					},
+
+				};
+
+				$('#home-search').easyAutocomplete(options);
 			}
+
+			function propertySearch() {
+				var options = {
+
+					// url: "resources/heroes.json",
+
+					data: {
+						"city": [
+							{"idCity": "1", "cityName": "Jakarta", "provinceName": "DKI Jakarta"},
+							{"idCity": "2", "cityName": "Bandung", "provinceName": "Jawa Barat"},
+							{"idCity": "3", "cityName": "Surabaya", "provinceName": "Jawa Timur"},
+							{"idCity": "4", "cityName": "Bekasi", "provinceName": "Jawa Barat"},
+							{"idCity": "5", "cityName": "Semarang", "provinceName": "Jawa Tengah"},
+							{"idCity": "6", "cityName": "Denpasar", "provinceName": "Bali"},
+							{"idCity": "7", "cityName": "Tanggerang", "provinceName": "Banten"},
+							{"idCity": "8", "cityName": "Jogja", "provinceName": "Jawa Tengah"},
+							{"idCity": "9", "cityName": "Cianjur", "provinceName": "Jawa Barat"},
+							{"idCity": "10", "cityName": "Palembang", "provinceName": "Sumatera Selatan"},
+						],
+					},
+
+					categories: [
+						{
+							listLocation: "city",
+							maxNumberOfElements: 10,
+						},
+					],
+
+					getValue: function(element) {
+						return element.cityName;
+					},
+
+					template: {
+						type: "description",
+						fields: {
+							description: "provinceName"
+						}
+					},
+
+					list: {
+						maxNumberOfElements: 10,
+						match: {
+							enabled: true
+						},
+						sort: {
+							enabled: true
+						},
+						onSelectItemEvent: function() {
+							var value = $("#property-search").getSelectedItemData().idCity;
+
+							$("#property-search-hidden").val(value).trigger("change");
+						}
+					},
+
+				};
+
+				$('#property-search').easyAutocomplete(options);
+			}
+
+			$(function() {
+				homeSearch();
+				propertySearch();
+				globalSearch();
+			});
 		</script>
 	</body>
 </html>

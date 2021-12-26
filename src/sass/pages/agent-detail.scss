@@ -131,3 +131,28 @@
 		margin-top: 15px;
 	}
 }
+
+.empty-space {
+	width: 100%;
+	text-align: center;
+	height: 40vh;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	
+	@include breakpoint(tablet) {
+		height: 60vh;
+	}
+
+	.empty-wrapper {
+		width: 100%;
+	}
+
+	i {
+		font-size: 3em;
+
+		+ p {
+			margin-top: 20px;
+		}
+	}
+}

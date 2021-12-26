@@ -34,7 +34,7 @@ body {
 		justify-content: space-between;
 	}
 
-	ul {
+	.flat {
 		padding: 0;
 		display: flex;
 		flex-wrap: wrap;
@@ -46,7 +46,7 @@ body {
 			}
 		}
 
-		li {
+		& > li {
 			margin: 0;
 
 			+ li {
