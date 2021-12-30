@@ -89,7 +89,7 @@
 	h4,
 	h5,
 	h6 {
-		line-height: initial;
+		line-height: 150%;
 
 		+ h3,
 		+ h4,
@@ -105,7 +105,7 @@
 
 	p {
 		font-size: 1em;
-		line-height: initial;
+		line-height: 150%;
 
 		+ h3,
 		+ h4,
@@ -242,6 +242,10 @@
 		background-color: $pink;
 	}
 
+	&.navy {
+		background-color: $navy;
+	}
+
 	&.orange-black {
 		background-color: $semi-orange;
 		color: $black;
@@ -331,7 +335,7 @@
 				}
 
 				&::placeholder {
-					color: $body-color;
+					color: #a7b3c9;
 					font-style: italic;
 				}
 			}
@@ -828,10 +832,11 @@
 	.badge-tag {
 		position: relative;
 		box-shadow: none;
+		margin: 2px;
 
-		+ .badge-tag {
-			margin-left: 4px;
-		}
+		// + .badge-tag {
+		// 	margin-left: 4px;
+		// }
 	}
 
 	.price {
@@ -872,6 +877,12 @@
 			text-transform: uppercase;
 			bottom: 0;
 			margin-left: 4px;
+		}
+	}
+
+	.price-content-area {
+		+ .badge-area {
+			margin-top: 16px;
 		}
 	}
 
@@ -1142,6 +1153,7 @@
 
 		p {
 			font-size: 1em;
+			line-height: 150%;
 
 			+ p,
 			+ ul,
@@ -1154,6 +1166,7 @@
 		ol {
 			padding-left: 24px;
 
+			+ p,
 			+ ul,
 			+ ol {
 				margin-top: 16px;

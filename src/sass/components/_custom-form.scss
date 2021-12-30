@@ -18,6 +18,10 @@
 
 		&.price-currency {
 			text-align: left!important;
+
+			&::placeholder {
+				color: #a7b3c9;
+			}
 		}
 
 		&:focus {
@@ -25,7 +29,8 @@
 		}
 
 		&::placeholder {
-			color: $body-color;
+			color: #a7b3c9;
+			font-style: italic;
 		}
 	}
 

@@ -39,6 +39,11 @@
 		@include breakpoint(tablet) {
 			font-size: 14px;
 		}
+
+		.jcf-option-placeholder {
+			color: #a7b3c9;
+			font-style: italic;
+		}
 	}
 
 	.jcf-select-opener {
