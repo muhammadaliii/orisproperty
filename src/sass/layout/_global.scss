@@ -270,6 +270,62 @@
 		bottom: 20px;
 		right: 20px;
 	}
+
+	&.outline {
+		background-color: transparent;
+		border: 2px solid $body-color;
+		color: $body-color;
+
+		&.tosca {
+			border-color: $tosca;
+			color: $tosca;
+		}
+
+		&.red {
+			border-color: $red;
+			color: $red;
+		}
+
+		&.blue {
+			border-color: $blue;
+			color: $blue;
+		}
+
+		&.orange {
+			border-color: $orange;
+			color: $orange;
+		}
+
+		&.green {
+			border-color: $green;
+			color: $green;
+		}
+
+		&.brown {
+			border-color: $brown;
+			color: $brown;
+		}
+
+		&.purple {
+			border-color: $purple;
+			color: $purple;
+		}
+
+		&.pink {
+			border-color: $pink;
+			color: $pink;
+		}
+
+		&.navy {
+			border-color: $navy;
+			color: $navy;
+		}
+
+		&.orange-black {
+			border-color: $semi-orange;
+			color: $black;
+		}
+	}
 }
 
 .search-property {
