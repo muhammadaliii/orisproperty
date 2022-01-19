@@ -52,15 +52,15 @@
 
 	.name-area {
 		h5 {
-			font-size: 1.2em;
+			font-size: 1.1em;
 			color: $title-color;
 			
 			@include breakpoint(small-mobile) {
-				font-size: 1.1em;
+				font-size: 1em;
 			}
 			
 			@include breakpoint(tablet) {
-				font-size: 1.3em;
+				font-size: 1.2em;
 			}
 
 			+ p {
@@ -69,11 +69,11 @@
 		}
 
 		p {
-			font-size: 0.9em;
+			font-size: 0.8em;
 			font-style: italic;
 			
 			@include breakpoint(tablet) {
-				font-size: 1em;
+				font-size: 0.9em;
 			}
 		}
 

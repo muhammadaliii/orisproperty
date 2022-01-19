@@ -1,12 +1,22 @@
 {% extends 'layouts/default.twig' %}
-{% set body_class = 'agents-page' %}
+{% set body_class = 'agents-page with-banner' %}
 {% set head_title = 'Agents' %}
 {% block page %}
+			<section class="banner-title">
+				<div class="image-area" data-aos="fade-in">
+					<div class="overlay"></div>
+					<figure>
+						<div class="images" style="background-image: url('assets/img/photos/image_5.jpg');"></div>
+					</figure>
+				</div>
+				<div class="title-area">
+					<div class="title-page">
+						<h4 class="font-text-bold" data-aos="zoom-in">Our Agents</h4>
+					</div>
+				</div>
+			</section>
 			<section class="agents-listing">
 				<div class="container">
-					<div class="title-page">
-						<h4 class="font-text-bold" data-aos="fade-right">Our Agents</h4>
-					</div>
 					<div class="agents-content">
 						<div class="wrapper">
 							<div class="agent-list text-center">

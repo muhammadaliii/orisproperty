@@ -1,12 +1,22 @@
 {% extends 'layouts/default.twig' %}
-{% set body_class = 'contact-page' %}
+{% set body_class = 'contact-page with-banner' %}
 {% set head_title = 'Contact' %}
 {% block page %}
+			<section class="banner-title">
+				<div class="image-area" data-aos="fade-in">
+					<div class="overlay"></div>
+					<figure>
+						<div class="images" style="background-image: url('assets/img/photos/image_7.jpg');"></div>
+					</figure>
+				</div>
+				<div class="title-area">
+					<div class="title-page">
+						<h4 class="font-text-bold" data-aos="zoom-in">Get in Touch</h4>
+					</div>
+				</div>
+			</section>
 			<section class="contact-view">
 				<div class="container">
-					<div class="title-page">
-						<h4 class="font-text-bold" data-aos="fade-right">Get in Touch</h4>
-					</div>
 					<div class="contact-content">
 						<div class="wrapper">
 							<div class="field-content map-area">
