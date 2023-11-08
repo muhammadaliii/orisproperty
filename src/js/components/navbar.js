@@ -17,24 +17,9 @@ function stickyHeader() {
 	});
 }
 
-function stickyClass() {
-	$(window).scroll(function(event){
-		var scroll = $(window).scrollTop();
-		
-		$('.share-contact').toggleClass('hiding',
-			scroll >= $('footer').offset().top - 54
-		);
-	});
-}
-
-
 $(function() {
 	$(document).ready(function () {
 		stickyHeader();
-
-		if ($('.share-contact').length > 0) {
-			stickyClass();
-		}
 	});
 
 	$(".toggle-down").click(function(){

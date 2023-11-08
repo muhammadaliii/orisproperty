@@ -18,7 +18,7 @@
 			font-family: 'montserrat_bold';
 			font-size: 12px;
 			text-transform: uppercase;
-			color: $blue;
+			color: $gold;
 			border: 0;
 			padding: 6px 20px;
 		}
@@ -29,7 +29,7 @@
 			padding: 6px 20px;
 
 			&.selected {
-				background-color: $blue;
+				background-color: $gold;
 				color: #e6eefb;
 
 				b {

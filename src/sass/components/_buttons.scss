@@ -78,6 +78,7 @@ $btn-hover-border-color: transparent;
 	text-transform: uppercase;
 	width: auto;
 	outline: 0;
+	cursor: pointer;
 	border-radius: 8px;
 	transition: all 0.3s linear;
 	
@@ -209,7 +210,7 @@ $btn-hover-border-color: transparent;
 
 		.icon-arrow {
 			@include breakpoint(desktop) {
-				background-image: url('../assets/img/icon-chevron-right-blue.png');
+				background-image: url('../assets/img/icon-chevron-right-gold.png');
 			}
 		}
 	}

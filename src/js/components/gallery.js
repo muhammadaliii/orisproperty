@@ -140,7 +140,7 @@
 		},
 		grabCursor: true,
 		centeredSlides: true,
-		slidesPerView: 'auto',
+		slidesPerView: 1,
 		autoHeight: true,
 		effect: 'coverflow',
 		loop: false,
@@ -158,7 +158,7 @@
 			rotate: 0,
 			stretch: 0,
 			depth: 150,
-			modifier: 1.5,
+			modifier: 4,
 			slideShadows : false,
 		},
 		breakpoints: {

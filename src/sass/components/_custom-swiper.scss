@@ -73,7 +73,7 @@
 	position: relative;
 	width: calc(100% - 92px);
 	height: 6px;
-	background-color: #CFE3ED;
+	background-color: #cad0d9;
 	-ms-touch-action: none;
 	border-radius: 10px;
 
@@ -121,14 +121,14 @@
 
 	.swiper-custom-arrow {
 		@include breakpoint(tablet) {
-			background-color: rgba($black, 0.2);
+			background-color: rgba($navy, 0.5);
 			backdrop-filter: saturate(180%) blur(20px);
 			box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
 		}
 
 		&:hover {
 			@include breakpoint(desktop) {
-				color: $dark-navy;
+				color: $navy;
 				background-color: $white;
 			}
 		}

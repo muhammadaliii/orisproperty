@@ -19,6 +19,7 @@ var gulp			= require('gulp'),
 	sourcemaps 		= require('gulp-sourcemaps'),
 	twig 			= require('gulp-twig'),
 	uglify			= require('gulp-uglify'),
+	terser			= require('gulp-terser'),
 	watch 			= require('gulp-watch');
 
 /**
@@ -156,7 +157,8 @@ gulp.task('js:vendor', function (done) {
 	.pipe(plumber({ errorHandler: onError }))
 	.pipe(sourcemaps.init())
 	.pipe(concat('vendor.js'))
-	.pipe(uglify())
+	// .pipe(uglify())
+	.pipe(terser())
 	.pipe(sourcemaps.write('./', {addComment: false}))
 	.pipe(gulp.dest(paths.jsVendor.output))
 	.pipe(browserSync.reload({stream:true}))
@@ -174,7 +176,8 @@ gulp.task('js:main', function (done) {
 	.pipe(plumber({ errorHandler: onError }))
 	.pipe(sourcemaps.init())
 	.pipe(concat('main.min.js'))
-	.pipe(uglify())
+	// .pipe(uglify())
+	.pipe(terser())
 	.pipe(sourcemaps.write('./', {addComment: false}))
 	.pipe(gulp.dest(paths.js.output))
 	.pipe(browserSync.reload({stream:true}))

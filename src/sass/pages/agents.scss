@@ -104,11 +104,15 @@
 			display: block;
 			width: 34px;
 			height: 34px;
+			opacity: 0.4;
 			background-color: $button-background;
 			border-radius: 100%;
 
 			&:hover {
-				background-color: $button-hover-background;
+				@include breakpoint(desktop) {
+					opacity: 1;
+					background-color: $gold;
+				}
 			}
 		}
 	}

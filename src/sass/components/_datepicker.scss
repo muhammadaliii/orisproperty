@@ -46,19 +46,19 @@
 					border-radius: 100%;
 
 					&.active {
-						background: $blue!important;
+						background: $gold!important;
 						color: $white;
 						border: 0;
 						box-shadow: none;
 
 						&.active {
-							background: $blue!important;
+							background: $gold!important;
 							color: $white;
 						}
 
 						&:hover {
 							&.active {
-								background: $blue!important;
+								background: $gold!important;
 								color: $white;	
 							}
 						}
@@ -69,12 +69,12 @@
 				}
 
 				&.today {
-					background: $blue!important;
+					background: $gold!important;
 					color: $white;
 
 					&:hover {
 						&:hover {
-							background: $blue!important;
+							background: $gold!important;
 							color: $white;	
 						}
 					}

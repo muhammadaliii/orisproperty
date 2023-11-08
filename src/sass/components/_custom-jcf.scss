@@ -288,7 +288,6 @@ body>.jcf-select-drop {
 	}
 }
 
-
 .radio-button {
 	.label-button {
 		font-size: 1.1em;
@@ -308,7 +307,7 @@ body>.jcf-select-drop {
 		}
 
 		&.jcf-label-active {
-			background-color: $button-hover-background;
+			background-color: $button-background;
 			text-shadow: none;
 		}
 	}

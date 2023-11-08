@@ -60,6 +60,7 @@
 		h5  {
 			font-size: 1.1em;
 			text-transform: uppercase;
+			color: $gold;
 			
 			@include breakpoint(tablet) {
 				font-size: 1.2em;

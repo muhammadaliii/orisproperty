@@ -8,10 +8,11 @@
 		bottom: 30px;
 		left: 16px;
 		right: 16px;
-		background-color: $transparent-blue;
+		background-color: rgba($navy, 0.5);
 		color: $white;
 		border-radius: 30px;
 		box-shadow: 2px 10px 40px rgba(0,0,0,0.2);
+		backdrop-filter: saturate(180%) blur(20px);
 
 		@include breakpoint(tablet) {
 			padding: 30px;
@@ -120,7 +121,7 @@
 	}
 
 	.price {
-		font-size: 2.7em;
+		font-size: 2.9em;
 		text-transform: uppercase;
 		line-height: 100%;
 		color: $yellow;
@@ -153,7 +154,7 @@
 		}
 
 		sub {
-			font-size: 25%;
+			font-size: 56%;
 			text-transform: uppercase;
 			bottom: 0;
 			margin-left: 4px;
@@ -179,11 +180,11 @@
 		transform: translate(-50%, -50%);
 	
 		@include breakpoint(mobile-iphone) {
-			top: 45%;
+			top: 40%;
 		}
 	
 		@include breakpoint(small-mobile) {
-			top: 38%;
+			top: 36%;
 		}
 	
 		@include breakpoint(tablet) {
@@ -212,7 +213,10 @@
 	.button {
 		&.white {
 			&:hover {
-				color: $blue;
+				color: $gold;
+				// border-color: #c09e49;
+				// background-color: #c09e49;
+				// color: #fff;
 			}
 		}
 	}
@@ -347,11 +351,15 @@
 			display: block;
 			width: 34px;
 			height: 34px;
+			opacity: 0.4;
 			background-color: $button-background;
 			border-radius: 100%;
 
 			&:hover {
-				background-color: $button-hover-background;
+				@include breakpoint(desktop) {
+					opacity: 1;
+					background-color: $gold;
+				}
 			}
 		}
 	}
@@ -449,7 +457,7 @@
 	}
 
 	.price {
-		font-size: 2.7em;
+		font-size: 2.9em;
 		text-transform: uppercase;
 		line-height: 100%;
 		color: $green;
@@ -458,12 +466,8 @@
 			font-size: 3.1em;
 		}
 		
-		@include breakpoint(wide) {
-			font-size: 3.4em;
-		}
-		
 		@include breakpoint(desktop) {
-			font-size: 3.7em;
+			font-size: 3.2em;
 		}
 
 		sup {
@@ -474,7 +478,7 @@
 		}
 
 		sub {
-			font-size: 25%;
+			font-size: 56%;
 			text-transform: uppercase;
 			bottom: 0;
 			margin-left: 4px;
@@ -502,7 +506,7 @@
 		bottom: 0;
 		left: 0;
 		right: 0;
-		background: $blue;
+		background: $gold;
 		border-radius: 30px;
 	
 		@include breakpoint(wide) {
@@ -545,7 +549,7 @@
 	}
 
 	p {
-		color: #CFE3ED;
+		color: #ede5cf;
 		font-size: 1em;
 
 		@include breakpoint(tablet) {
@@ -558,13 +562,13 @@
 	}
 
 	.button {
-		background-color: $dark-blue;
-		border-color: $dark-blue;
+		background-color: $semi-dark-gold;
+		border-color: $semi-dark-gold;
 
 		&:hover {
 			background-color: $white;
 			border-color: $white;
-			color: $blue;
+			color: $gold;
 		}
 	}
 }

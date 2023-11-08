@@ -43,7 +43,10 @@ $dark-blue: #1375A7;
 $transparent-blue: rgba($blue, 0.7);
 $white: #FFFFFF;
 $black: #000;
-$navy: #4B5970;
+$navy: #14283c;
+$gold: #c09e49;
+$dark-gold: #806728;
+$semi-dark-gold: #a17e2c;
 $semi-navy: #728098;
 $dark-navy: #253248;
 $light-blue: #F8FAFF;
@@ -58,19 +61,18 @@ $pink: #bd1d8c;
 $red: #D12424;
 $grey: #444;
 $brown: #ab7d4e;
-$gold: #c79d4f;
 $transparent: transparent;
 
 // Links
 $title-color: $navy;
 $link-color: $navy;
 $link-decoration: none;
-$link-hover-color: $blue;
+$link-hover-color: $gold;
 $link-hover-decoration: underline;
 
 // Button
 $button-background: $navy;
-$button-hover-background: $blue;
+$button-hover-background: $gold;
 $button-color: $white;
 $button-hover-color: $white;
 
@@ -80,7 +82,7 @@ $body-color: $semi-navy;
 $text: $body-color;
 
 // $footer-background: #CFE3ED;
-$footer-background: #e6eefb;
+$footer-background: rgba($navy, 0.2);
 $footer-background-darker: $navy;
 
 // Social Media

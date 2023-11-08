@@ -7,6 +7,26 @@
 	z-index: 1000;
 	background-color: $white;
 
+	.wrapper-inside {
+		position: absolute;
+		top: 50%;
+		bottom: initial;
+		left: 50%;
+		right: initial;
+		transform: translate(-50%, -50%);
+	}
+
+	.loader-spinner {
+		position: relative;
+		width: 150px;
+		height: 150px;
+		margin: 0 auto;
+
+		+ .progress-area {
+			margin-top: 30px;
+		}
+	}
+
 	.logo-loader {
 		width: 50px;
 		height: 50px;
@@ -26,16 +46,13 @@
 #loader {
 	display: block;
 	position: relative;
-	left: 50%;
-	top: 50%;
 	width: 150px;
 	height: 150px;
-	margin: -75px 0 0 -75px;
 	border-radius: 50%;
 	border: 3px solid transparent;
 	border-top-color: $navy;
-	-webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-	animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
 
 	&:before {
 		content: "";
@@ -46,9 +63,9 @@
 		bottom: 5px;
 		border-radius: 50%;
 		border: 3px solid transparent;
-		border-top-color: $dark-blue;
-		-webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-		animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+		border-top-color: $dark-gold;
+		-webkit-animation: spin 3s linear infinite;
+		animation: spin 3s linear infinite;
 	}
 
 	&:after {
@@ -60,10 +77,25 @@
 		bottom: 15px;
 		border-radius: 50%;
 		border: 3px solid transparent;
-		border-top-color: $blue;
+		border-top-color: $gold;
+		-webkit-animation: spin 1.5s linear infinite;
+		animation: spin 1.5s linear infinite;
+	}
+}
 
-		-webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-		animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+.progress-area {
+	width: 250px;
+	background-color: #ebebeb;
+	border-radius: 20px;
+	overflow: hidden;
+
+	.progress-count {
+		font-size: 0.75em;
+		color: white;
+		width: 10%;
+		height: 6px;
+		background-color: $gold;
+		text-align: center;
 	}
 }
 

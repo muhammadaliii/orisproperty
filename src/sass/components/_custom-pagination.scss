@@ -9,19 +9,20 @@
 
 		&.disabled {
 			.page-link {
-				opacity: 0.4;
-				background-color: $semi-navy;
+				opacity: 0.2;
+				background-color: $navy;
 			}
 		}
 
 		&.active {
 			.page-link {
 				color: $white;
-				background-color: $blue;
+				opacity: 1;
+				background-color: $gold;
 				
 				&:hover {
 					@include breakpoint(desktop) {
-						background-color: $blue;
+						background-color: $gold;
 					}
 				}
 			}
@@ -35,7 +36,8 @@
 			padding: 0;
 			width: 30px;
 			height: 30px;
-			background-color: $semi-navy;
+			opacity: 0.4;
+			background-color: $navy;
 			border: 0;
 			border-radius: 100%;
 			
@@ -46,9 +48,24 @@
 				line-height: 34px;
 			}
 
+			&.dis-more {
+				background-color: transparent;
+				color: $navy;
+				line-height: 24px;
+				pointer-events: none;
+
+				&:hover,
+				&:focus, {
+					@include breakpoint(desktop) {
+						opacity: 0.4;
+						background-color: transparent;
+					}
+				}
+			}
+
 			&:hover {
 				@include breakpoint(desktop) {
-					background-color: $dark-navy;
+					opacity: 1;
 				}
 			}
 

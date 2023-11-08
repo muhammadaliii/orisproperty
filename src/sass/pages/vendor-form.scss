@@ -38,7 +38,7 @@
 
 			& > legend {
 				color: $white;
-				background-color: $blue;
+				background-color: $gold;
 				border-radius: 30px;
 			}
 		}
@@ -49,16 +49,16 @@
 
 		.jcf-select,
 		.form-control {
-			background-color: #e6eefb;
+			background-color: #eaeef5;
 		}
 
 		.jcf-radio,
 		.jcf-checkbox {
 			border: 0;
-			background-color: #e6eefb;
+			background-color: #eaeef5;
 
 			&.jcf-checked {
-				background-color: $blue;
+				background-color: $gold;
 			}
 		}
 

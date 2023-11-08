@@ -3,13 +3,60 @@
  * Custom Scripts
  */
 
+
+// function animateValue(id, start, end, duration) {
+// 	var elem = document.getElementById("progress-bar");
+// 	var range = end - start,
+// 		current = start,
+// 		increment = end > start ? 1 : -1,
+// 		stepTime = Math.abs(Math.floor(duration / range)),
+// 		obj = $(id);
+
+// 	var timer = setInterval(function() {
+// 		current += increment;
+// 		$(obj).text(current + "%");
+// 		// obj.innerHTML = current;
+
+// 		if (current == end) {
+// 			clearInterval(timer);
+// 		}
+// 	}, stepTime);
+// }
+
+
+// var progress = 0,
+// 	perfData = window.performance.timing,
+// 	EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
+// 	time = parseInt((EstimatedTime / 1000) % 60) * 100;
+
+// function moveBar() {
+// 	if (progress == 0) {
+// 		progress = 1;
+// 		var elem = document.getElementById("progress-bar");
+// 		var width = 10;
+// 		var id = setInterval(frame, 10);
+// 		function frame() {
+// 			if (width >= 100) {
+// 				clearInterval(id);
+// 				progress = 0;
+// 			} else {
+// 				width++;
+// 				elem.animate({
+// 					width: width + "%"
+// 				}, time);
+// 				// elem.style.width = width + "%";
+// 				elem.innerHTML = width + "%";
+// 				console.log('time :', time);
+// 			}
+// 		}
+// 	}
+// }
+
+
+
+
 $(function() {
 	// Document Ready
-
-	var targetLoader = $("#loader-wrapper");
-	targetLoader.fadeOut("slow", function(){
-		targetLoader.remove();
-	});
 
 	jcf.setOptions('Select', {
 		wrapNative: true
@@ -60,6 +107,29 @@ $(function() {
 			easing: 'linear',
 		});
 	}, 800);
+
+	var width = 100,
+		perfData = window.performance.timing,
+		EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
+		time = parseInt((EstimatedTime / 1000) % 60) * 100;
+
+	$("#progress-bar").animate({
+		width: width + "%"
+	}, time);
+
+	window.onload = function(){
+		var targetLoader = $("#loader-wrapper");
+			targetLoader.fadeOut("slow", function(){
+				targetLoader.remove();
+			});
+	}
+
+	// moveBar();
+	// animateValue();
+
+	// timeout_trigger();
+
+	// console.log('moveBar', moveBar());
 
 	$(window).on('resize', function(){
 		AOS.refresh();
