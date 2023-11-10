@@ -21,7 +21,7 @@
 		[class*='col-'] {
 			padding: 0;
 
-			@include breakpoint(wide) {
+			@include breakpoint(tablet) {
 				padding: 20px 15px;
 			}
 			
@@ -29,10 +29,6 @@
 				margin-top: 30px;
 				
 				@include breakpoint(tablet) {
-					margin-top: 50px;
-				}
-				
-				@include breakpoint(wide) {
 					margin-top: 0;
 				}
 			}

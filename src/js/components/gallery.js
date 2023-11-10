@@ -74,6 +74,26 @@
 		},
 	});
 
+
+	// =========== PLAYER FOR SLIDER ===========
+	var myPlayerSlider;
+	jQuery(function(){
+		myPlayerSlider = jQuery(".customPlayer.sliderStyle").YTPlayer({
+			playOnlyIfVisible: true,
+			realfullscreen: false,
+			autoPlay: false,
+			mute:true,
+
+			onReady: function( player ) {
+				$(".vid-thumb").hover(function(){
+					$(this).find(myPlayerSlider).YTPPlay();
+				},function(){
+					$(this).find(myPlayerSlider).YTPPause();
+				});
+
+			}
+		});
+	});
 	var swiper = new Swiper('.thumbnails.slider .swiper-container', {
 		keyboard: {
 			enabled: true,
@@ -106,7 +126,34 @@
 				spaceBetween: 30,
 			},
 		},
+		on: {
+			init: function () {
+				console.log( 'init :', this.realIndex );
+			},
+			realIndexChange: function () {
+				console.log( 'realIndexChange :', this.realIndex )
+			},
+			slideChange: function () {
+				console.log( 'slideChange :', this.realIndex );
+			},
+			slideChangeTransitionStart: function () {
+				console.log( 'slideChangeTransitionStart :', this.realIndex );
+			},
+			slideChangeTransitionEnd: function () {
+				var elementFind = $('.thumbnail-slider .swiper-slide');
+				elementFind.each(function(){
+					if ($(this).hasClass('swiper-slide-active')) {
+						$(this).find(myPlayerSlider).YTPPlay();
+					} else {
+						$(this).find(myPlayerSlider).YTPPause();
+					}
+				});
+			},
+		}
 	});
+	// =========== END PLAYER FOR SLIDER ===========
+
+
 
 	var swiper = new Swiper('.projects .swiper-container', {
 		keyboard: {

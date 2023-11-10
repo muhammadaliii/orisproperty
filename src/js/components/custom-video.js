@@ -1,51 +1,40 @@
 (function($){
 
-	$('[data-vbg]').youtube_background();
+	var mediaQuery = window.matchMedia("(max-width: 1024px)")
 
-	$(".vid-thumb").each(function () {
-		$(this).find(".video-background-controls .play-toggle").click()
-	});
+	// =========== PLAYER FOR THUMBNAIL ===========
+	if (mediaQuery.matches) {
+			// =========== MOBILE ===========
+			myPlayer = jQuery(".customPlayer.thumbStyle").YTPlayer({
+				playOnlyIfVisible: true,
+				realfullscreen: false,
+				autoPlay: true,
+				mute:true
+			});
 
-	// $(".vid-thumb").find(".video-background-controls .play-toggle").click();
-
-	$(".vid-thumb").hover(function(){
-		$(this).find(".video-background-controls .play-toggle").click();
-	},function(){
-		$(this).find(".video-background-controls .play-toggle").click();
-	});
-
-	var media = $('.thumb');
-	var tolerancePixel = 40;
-	function checkMedia(){
-		var scrollTop = $(window).scrollTop() + tolerancePixel;
-		var scrollBottom = $(window).scrollTop() + $(window).height() - tolerancePixel;
-		media.each(function(index, el) {
-			var yTopMedia = $(this).offset().top;
-			var yBottomMedia = $(this).height() + yTopMedia;
-			if(scrollTop < yBottomMedia && scrollBottom > yTopMedia){
-				$(this).addClass('tes');
-				// console.log('play');
-				$(this).find(".video-background-controls .play-toggle").click();
-			} else {
-				$(this).removeClass('tes');
-				// console.log('stop');
-				$(this).find(".video-background-controls .play-toggle").click();
-			}
-		});
+		} else {
+			// =========== DESKTOP ===========
+			myPlayer = jQuery(".customPlayer.thumbStyle").YTPlayer({
+				realfullscreen: false,
+				autoPlay: false,
+				mute:true,
+				onReady: function( player ) {
+					$(".vid-thumb").hover(function(){
+						$(this).find(myPlayer).YTPPlay();
+					},function(){
+						$(this).find(myPlayer).YTPPause();
+					});
+				}
+			});
 	}
-	$(window).on('scroll', checkMedia);
+	// =========== END PLAYER FOR THUMBNAIL ===========
+	
 
+	// =========== PLAYER FOR DETAIL PROPERTY ===========
+	myPlayerDetail = jQuery(".customPlayer.detailStyle").YTPlayer({
+		playOnlyIfVisible: true
+	});
+	// =========== END PLAYER FOR DETAIL PROPERTY ===========
 
-	// $(window).scroll(function() {
- //        $("iframe").each( function() {
- //            if( $(window).scrollTop() > $(this).offset().top - 200 ) {
- //                $(this).css('opacity',1);
- //                player.playVideo();
- //            } else {
- //                $(this).css('opacity',0);
- //                player.stopVideo();
- //            }
- //        }); 
- //    });
 
 })(jQuery);

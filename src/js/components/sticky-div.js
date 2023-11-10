@@ -8,20 +8,6 @@ function stickyClass() {
 	});
 }
 
-
-
-
-// function mediaMatches(x) {
-// 	if (mediaQuery.matches) {
-// 		document.body.style.backgroundColor = "yellow";
-// 	} else {
-// 		document.body.style.backgroundColor = "pink";
-// 	}
-// }
-
-
-
-
 var mediaQuery = window.matchMedia("(max-width: 1000px)")
 
 function stickyVideo(x) {
@@ -34,10 +20,10 @@ function stickyVideo(x) {
 
 	if (mediaQuery.matches) {
 			sidebarVideo.destroy();
-			console.log('destroy');
+			// console.log('destroy');
 		} else {
 			sidebarVideo.updateSticky();
-			console.log('update');
+			// console.log('update');
 	}
 }
 

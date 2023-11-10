@@ -241,7 +241,7 @@ body {
 	letter-spacing: 0.3pt;
 	padding: 6px 10px;
 	position: absolute;
-	z-index: 1;
+	z-index: 2;
 	top: initial;
 	bottom: initial;
 	left: initial;
@@ -843,9 +843,46 @@ body {
 		}
 	}
 
+	.inline-YTPlayer {
+		position: absolute!important;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		.customPlayer {
+			padding: 0!important;
+			height: 100%!important;
+		}
+
+		.inlinePlayButton {
+			display: none!important;
+		}
+
+		.loading {
+			display: none!important;
+		}
+	}
+
+	// .togglePlay {
+	// 	position: absolute;
+	// 	z-index: 9;
+	// 	top: 40%;
+	// 	left: 40%;
+	// 	width: 80px;
+	// 	height: 80px;
+	// 	border: 0;
+	// 	appearance: none;
+	// 	color: $gold;
+	// 	cursor: pointer;
+	// 	outline: 0;
+	// 	background-color: $white;
+	// 	transition: $transition-base;
+	// }
 
 	&.sold {
 		figure,
+		.customPlayer,
 		.vid-background {
 			opacity: 0.5;
 		}
@@ -1091,6 +1128,50 @@ body {
 			height: 100%;
 		}
 
+		.togglePlay {
+			position: absolute;
+			z-index: 9;
+			top: 40%;
+			left: 40%;
+			width: 80px;
+			height: 80px;
+			border: 0;
+			appearance: none;
+			color: $gold;
+			cursor: pointer;
+			outline: 0;
+			background-color: $white;
+			transition: $transition-base;
+		}
+
+		.muteButton {
+			font-size: 12px;
+			position: absolute;
+			top: initial;
+			bottom: 15px;
+			left: 15px;
+			right: initial;
+			height: 28px;
+			width: 28px;
+			border-radius: 100%;
+			line-height: 28px;
+			border: 0;
+			appearance: none;
+			color: $gold;
+			cursor: pointer;
+			outline: 0;
+			background-color: $white;
+			transition: $transition-base;
+			box-shadow: 2px 4px 15px rgba($black, 0.15);
+
+			&:hover {
+				@include breakpoint(desktop) {
+					background-color: $white;
+					color: $navy;
+				}
+			}
+		}
+
 		.vid-background {
 			pointer-events: none;
 		}
@@ -1176,6 +1257,43 @@ body {
 		
 		@include breakpoint(large-desktop) {
 			margin-left: 31.5%;
+		}
+	}
+
+	.inline-YTPlayer {
+		position: absolute!important;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		.inlinePlayButton {
+			display: none!important;
+		}
+
+		.loading {
+			display: none!important;
+		}
+	}
+
+	.customPlayer {
+		// pointer-events: none;
+		padding: 0!important;
+		height: 100%!important;
+
+		&.isMuted {
+			.muteButton {
+				color: $white;
+				background-color: rgba($navy, 0.5);
+				backdrop-filter: saturate(180%) blur(20px);
+
+				&:hover {
+					@include breakpoint(desktop) {
+						background-color: $white;
+						color: $navy;
+					}
+				}
+			}
 		}
 	}
 }
@@ -2052,12 +2170,6 @@ body {
 				font-size: 1em;
 			}
 		}
-	}
-}
-
-.vid-thumb {
-	.video-js {
-		width: 100%;
 	}
 }
 
