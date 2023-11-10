@@ -864,22 +864,6 @@ body {
 		}
 	}
 
-	// .togglePlay {
-	// 	position: absolute;
-	// 	z-index: 9;
-	// 	top: 40%;
-	// 	left: 40%;
-	// 	width: 80px;
-	// 	height: 80px;
-	// 	border: 0;
-	// 	appearance: none;
-	// 	color: $gold;
-	// 	cursor: pointer;
-	// 	outline: 0;
-	// 	background-color: $white;
-	// 	transition: $transition-base;
-	// }
-
 	&.sold {
 		figure,
 		.customPlayer,
@@ -1146,6 +1130,7 @@ body {
 
 		.muteButton {
 			font-size: 12px;
+			padding: 0;
 			position: absolute;
 			top: initial;
 			bottom: 15px;
