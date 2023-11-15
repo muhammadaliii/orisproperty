@@ -1060,6 +1060,31 @@ body {
 		margin-bottom: 80px;
 	}
 
+	.detail-video-wrapper {
+		&.with-no-video {
+			.gallery-detail {
+				margin-left: 0;
+			}
+
+			.custom-container {
+				@include breakpoint(tablet) {
+					padding: 0;
+					margin-right: auto;
+					margin-left: auto;
+					max-width: 720px;
+				}
+
+				@include breakpoint(wide) {
+					max-width: 960px;
+				}
+
+				@include breakpoint(desktop) {
+					max-width: 1140px;
+				}
+			}
+		}
+	}
+
 	.custom-container {
 		padding: 0 16px;
 
@@ -1801,6 +1826,7 @@ body {
 		bottom: 20px;
 		left: initial;
 		right: 20px;
+		min-width: 420px;
 	}
 
 	&.hiding {
