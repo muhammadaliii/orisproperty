@@ -12,7 +12,7 @@
 	min-width: 0;
 	background-color: $white;
 	border: 0;
-	border-radius: 30px;
+	border-radius: 8px;
 	
 	@include breakpoint(tablet) {
 		padding: 0 32px 0 16px;
@@ -285,31 +285,6 @@ body>.jcf-select-drop {
 
 	& + label {
 		cursor: pointer;
-	}
-}
-
-.radio-button {
-	.label-button {
-		font-size: 1.1em;
-		line-height: 130%;
-		text-align: center;
-		padding: 6px 20px;
-		cursor: pointer;
-		margin: 0;
-		color: $white;
-		border-radius: 30px;
-		transition: all 0.3s linear;
-		text-shadow: 0 2px 15px rgba(0,0,0,0.3);
-		
-		@include breakpoint(tablet) {
-			font-size: 1.3em;
-			line-height: 140%;
-		}
-
-		&.jcf-label-active {
-			background-color: $button-background;
-			text-shadow: none;
-		}
 	}
 }
 

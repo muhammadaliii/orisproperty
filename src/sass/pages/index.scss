@@ -1,5 +1,7 @@
 .cover {
 	position: relative;
+	background-color: $gold;
+	overflow: initial;
 
 	.slide-info {
 		padding: 20px;
@@ -171,21 +173,23 @@
 
 	.search-property {
 		width: calc(100% - 32px);
-		position: absolute;
-		z-index: 2;
-		top: 50%;
-		bottom: initial;
-		left: 50%;
-		right: initial;
-		transform: translate(-50%, -50%);
+		margin: 0 auto;
+		padding: 20vh 0;
+		// position: absolute;
+		// z-index: 2;
+		// top: 50%;
+		// bottom: initial;
+		// left: 50%;
+		// right: initial;
+		// transform: translate(-50%, -50%);
 	
-		@include breakpoint(mobile-iphone) {
-			top: 40%;
-		}
+		// @include breakpoint(mobile-iphone) {
+		// 	top: 40%;
+		// }
 	
-		@include breakpoint(small-mobile) {
-			top: 36%;
-		}
+		// @include breakpoint(small-mobile) {
+		// 	top: 36%;
+		// }
 	
 		@include breakpoint(tablet) {
 			width: 70%;
@@ -193,12 +197,7 @@
 	
 		@include breakpoint(wide) {
 			width: 50%;
-			top: 46%;
-		}
-	
-		@include breakpoint(desktop) {
-			width: 40%;
-			top: 50%;
+			// top: 46%;
 		}
 
 		.advance-area {
@@ -392,7 +391,7 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		border-radius: 30px;
+		border-radius: 8px;
 		box-shadow: 2px 4px 30px rgba(0,0,0,0.2);
 
 	}
@@ -507,7 +506,7 @@
 		left: 0;
 		right: 0;
 		background: $gold;
-		border-radius: 30px;
+		border-radius: 8px;
 	
 		@include breakpoint(wide) {
 			top: 50%;

@@ -22,10 +22,10 @@ body {
 }
 
 main {
-	padding-top: 74px;
+	padding-top: 66px;
 
 	@include breakpoint(tablet) {
-		padding-top: 80px;
+		padding-top: 72px;
 	}
 
 	&:focus {
@@ -178,11 +178,11 @@ section {
 	}
 
 	&.cover {
-		padding: 0;
-		margin-bottom: 60px;
+		padding-top: 60px;
+		padding-bottom: 0;
 		
 		@include breakpoint(tablet) {
-			margin-bottom: 80px;
+			padding-top: 72px;
 		}
 	}
 

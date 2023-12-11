@@ -80,14 +80,14 @@
 								<a class="font-text-medium" href="contact.html">Contact</a>
 							</li>
 							<li>
-								<button type="button" class="button button-search full-rounded" data-toggle="modal" data-target="#modal-search">
+								<button type="button" class="button button-search" data-toggle="modal" data-target="#modal-advanced-search">
 									<span class="fa fa-search"></span>
 								</button>
 							</li>
 						</ul>
 					</div>
 					<div class="header-mobile show-mobile">
-						<button type="button" class="button button-search full-rounded" data-toggle="modal" data-target="#modal-search" data-aos="fade-left">
+						<button type="button" class="button button-search" data-toggle="modal" data-target="#modal-advanced-search" data-aos="fade-left">
 							<span class="fa fa-search"></span>
 						</button>
 						<div class="toggle-down">
@@ -705,6 +705,254 @@
 					</div>
 				</div>
 			</section>
+			<div class="modal" id="modal-advanced-search" tabindex="-1" role="dialog" aria-labelledby="modal-advanced-search-title" aria-hidden="true">
+				<div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title font-text-bold" id="modal-advanced-search-title">Advanced Search</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="input-advanced-search">
+								<div class="wrapper">
+									<form action="" id="form-advanced-search">
+										<div class="advance-area">
+											<div class="advance-wrapper">
+												<div class="form-row">
+													<div class="form-group col-12">
+														<label class="label-form font-text-bold">Jenis Transaksi</label>
+														<div class="row no-gutters">
+															<div class="form-check col-6">
+																<div class="wrapper-check">
+																	<input class="form-check-input" type="radio" name="trans-type" id="trans-type1" value="Jual" checked>
+																	<label class="form-check-label" for="trans-type1">Jual</label>
+																</div>
+															</div>
+															<div class="form-check col-6">
+																<div class="wrapper-check">
+																	<input class="form-check-input" type="radio" name="trans-type" id="trans-type2" value="Sewa">
+																	<label class="form-check-label" for="trans-type2">Sewa</label>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="form-group col-12">
+														<label class="label-form font-text-bold" for="input-location">Lokasi</label>
+														<div class="input-with-icon">
+															<span class="icon fa fa-map-marker-alt"></span>
+															<input class="form-control" type="text" id="input-location" name="inputLocation" placeholder="Masukan Lokasi..." autocomplete="off">
+															
+															<input type="hidden" name="input_city_hidden" id="location-search-hidden">
+														</div>
+													</div>
+													<div class="form-group col-12">
+														<label class="label-form font-text-bold">Tipe Properti</label>
+														<div class="row no-gutters">
+															<div class="form-check col-6">
+																<div class="wrapper-check">
+																	<input class="form-check-input" type="radio" name="input-property-type" id="input-property-type1" value="Semua" checked>
+																	<label class="form-check-label" for="input-property-type1">Semua</label>
+																</div>
+															</div>
+															<div class="form-check col-6">
+																<div class="wrapper-check">
+																	<input class="form-check-input" type="radio" name="input-property-type" id="input-property-type2" value="Rumah">
+																	<label class="form-check-label" for="input-property-type2">Rumah</label>
+																</div>
+															</div>
+															<div class="form-check col-6">
+																<div class="wrapper-check">
+																	<input class="form-check-input" type="radio" name="input-property-type" id="input-property-type3" value="Apartemen">
+																	<label class="form-check-label" for="input-property-type3">Apartemen</label>
+																</div>
+															</div>
+															<div class="form-check col-6">
+																<div class="wrapper-check">
+																	<input class="form-check-input" type="radio" name="input-property-type" id="input-property-type4" value="Tanah">
+																	<label class="form-check-label" for="input-property-type4">Tanah</label>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="form-group col-12">
+														<label class="label-form font-text-bold">Sub Kategori</label>
+														<div class="row no-gutters">
+															<div class="form-check col-6">
+																<div class="wrapper-check">
+																	<input class="form-check-input" type="checkbox" name="subCategoryCheckbox" id="subCat-house" value="Rumah">
+																	<label class="form-check-label" for="subCat-house">Rumah</label>
+																</div>
+															</div>
+															<div class="form-check col-6">
+																<div class="wrapper-check">
+																	<input class="form-check-input" type="checkbox" name="subCategoryCheckbox" id="subCat-townhouse" value="Townhouse">
+																	<label class="form-check-label" for="subCat-townhouse">Townhouse</label>
+																</div>
+															</div>
+															<div class="form-check col-6">
+																<div class="wrapper-check">
+																	<input class="form-check-input" type="checkbox" name="subCategoryCheckbox" id="subCat-vila" value="Vila">
+																	<label class="form-check-label" for="subCat-vila">Vila</label>
+																</div>
+															</div>
+															<div class="form-check col-6">
+																<div class="wrapper-check">
+																	<input class="form-check-input" type="checkbox" name="subCategoryCheckbox" id="subCat-kos" value="Rumah Kos">
+																	<label class="form-check-label" for="subCat-kos">Rumah Kos</label>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="form-group col-12">
+														<label class="label-form font-text-bold" for="input-building-size">Luas Bangunan</label>
+														<select class="form-control" id="input-building-size" name="input-building-size">
+															<option value="" class="placeholder" hidden>Semua Ukuran</option>
+															<option value="< 50sqm">&lt; 50sqm</option>
+															<option value="51sqm - 100sqm">51sqm - 100sqm</option>
+															<option value="101sqm - 200sqm">101sqm - 200sqm</option>
+															<option value="201sqm - 300sqm">201sqm - 300sqm</option>
+															<option value="> 301sqm">&gt; 301sqm</option>
+														</select>
+													</div>
+													<div class="form-group col-12">
+														<label class="label-form font-text-bold" for="input-land-size">Luas Tanah</label>
+														<select class="form-control" id="input-land-size" name="input-land-size">
+															<option value="" class="placeholder" hidden>Semua Ukuran</option>
+															<option value="< 100sqm">&lt; 100sqm</option>
+															<option value="101sqm - 200sqm">101sqm - 200sqm</option>
+															<option value="201sqm - 300sqm">201sqm - 300sqm</option>
+															<option value="301sqm - 400sqm">301sqm - 400sqm</option>
+															<option value="> 401sqm">&gt; 401sqm</option>
+														</select>
+													</div>
+													<div class="form-group col-12">
+														<label class="label-form font-text-bold">Bedroom</label>
+														<div class="row no-gutters">
+															<div class="form-check col-2">
+																<div class="wrapper-check">
+																	<input class="form-check-input" type="radio" name="input-bedroom" id="input-bedroom1" value="1" checked>
+																	<label class="form-check-label" for="input-bedroom1">1</label>
+																</div>
+															</div>
+															<div class="form-check col-2">
+																<div class="wrapper-check">
+																	<input class="form-check-input" type="radio" name="input-bedroom" id="input-bedroom2" value="2">
+																	<label class="form-check-label" for="input-bedroom2">2</label>
+																</div>
+															</div>
+															<div class="form-check col-2">
+																<div class="wrapper-check">
+																	<input class="form-check-input" type="radio" name="input-bedroom" id="input-bedroom3" value="3">
+																	<label class="form-check-label" for="input-bedroom3">3</label>
+																</div>
+															</div>
+															<div class="form-check col-2">
+																<div class="wrapper-check">
+																	<input class="form-check-input" type="radio" name="input-bedroom" id="input-bedroom4" value="4">
+																	<label class="form-check-label" for="input-bedroom4">4</label>
+																</div>
+															</div>
+															<div class="form-check col-2">
+																<div class="wrapper-check">
+																	<input class="form-check-input" type="radio" name="input-bedroom" id="input-bedroom5" value="5">
+																	<label class="form-check-label" for="input-bedroom5">5</label>
+																</div>
+															</div>
+															<div class="form-check col-2">
+																<div class="wrapper-check">
+																	<input class="form-check-input" type="radio" name="input-bedroom" id="input-bedroom6" value="5+">
+																	<label class="form-check-label" for="input-bedroom6">5+</label>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="form-group col-12">
+														<label class="label-form font-text-bold">Bathroom</label>
+														<div class="row no-gutters">
+															<div class="form-check col-2">
+																<div class="wrapper-check">
+																	<input class="form-check-input" type="radio" name="input-bathroom" id="input-bathroom1" value="1" checked>
+																	<label class="form-check-label" for="input-bathroom1">1</label>
+																</div>
+															</div>
+															<div class="form-check col-2">
+																<div class="wrapper-check">
+																	<input class="form-check-input" type="radio" name="input-bathroom" id="input-bathroom2" value="2">
+																	<label class="form-check-label" for="input-bathroom2">2</label>
+																</div>
+															</div>
+															<div class="form-check col-2">
+																<div class="wrapper-check">
+																	<input class="form-check-input" type="radio" name="input-bathroom" id="input-bathroom3" value="3">
+																	<label class="form-check-label" for="input-bathroom3">3</label>
+																</div>
+															</div>
+															<div class="form-check col-2">
+																<div class="wrapper-check">
+																	<input class="form-check-input" type="radio" name="input-bathroom" id="input-bathroom4" value="4">
+																	<label class="form-check-label" for="input-bathroom4">4</label>
+																</div>
+															</div>
+															<div class="form-check col-2">
+																<div class="wrapper-check">
+																	<input class="form-check-input" type="radio" name="input-bathroom" id="input-bathroom5" value="5">
+																	<label class="form-check-label" for="input-bathroom5">5</label>
+																</div>
+															</div>
+															<div class="form-check col-2">
+																<div class="wrapper-check">
+																	<input class="form-check-input" type="radio" name="input-bathroom" id="input-bathroom6" value="5+">
+																	<label class="form-check-label" for="input-bathroom6">5+</label>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="form-group col-6">
+														<label class="label-form font-text-bold" for="min-price">Harga Min</label>
+														<input class="form-control price-currency min" id="min-price" name="min-price" placeholder="Min Price">
+													</div>
+													<div class="form-group col-6">
+														<label class="label-form font-text-bold" for="max-price">Harga Max</label>
+														<input class="form-control price-currency max" id="max-price" name="max-price" placeholder="Max Price">
+													</div>
+													<div class="form-group col-12">
+														<label class="label-form font-text-bold" for="input-sort">Urutkan Dari</label>
+														<select class="form-control" id="input-sort" name="input-sort">
+															<option value="" class="placeholder" hidden>Urutkan Dari</option>
+															<option value="Popularitas">Popularitas</option>
+															<option value="Terbaru">Terbaru</option>
+															<option value="Harga Rendah ke Tinggi">Harga Rendah ke Tinggi</option>
+															<option value="Harga Tinggi ke Rendah">Harga Tinggi ke Rendah</option>
+														</select>
+													</div>
+
+
+
+
+													
+													
+													
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							
+							
+							<button class="button full-width  font-text-bold" type="submit">Search</button>
+						</div>
+
+						
+					</div>
+				</div>
+			</div>
+
+
 			<div class="modal fade" id="modal-search" tabindex="-1" role="dialog" aria-labelledby="modal-search-title" aria-hidden="true">
 				<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
 					<div class="modal-content">
@@ -1019,7 +1267,7 @@
 			</div>
 			<div class="copyright">
 				<div class="container text-center">
-					<p class="text-footer">Copyright © 2023 PT. Oris Haza Propertindo. All Rights Reserved.</p>
+					<p class="text-footer">Copyright © 2024 PT. Oris Haza Propertindo. All Rights Reserved.</p>
 				</div>
 			</div>
 		</footer>		<script src="js/vendor.js"></script>

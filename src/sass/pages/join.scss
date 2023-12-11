@@ -15,7 +15,7 @@
 		.wrapper-content {
 			background-color: $white;
 			padding: 20px;
-			border-radius: 30px;
+			border-radius: 8px;
 			box-shadow: 2px 4px 20px rgba(0,0,0,0.10);
 			
 			@include breakpoint(tablet) {
@@ -102,7 +102,7 @@
 	.form-content {
 		.form {
 			padding: 30px 20px;
-			border-radius: 30px;
+			border-radius: 8px;
 			background-color: $navy;
 			
 			@include breakpoint(tablet) {

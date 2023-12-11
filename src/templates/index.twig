@@ -4,7 +4,7 @@
 {% block page %}
 			<section class="cover">
 				<div class="cover-slider">
-					<div class="swiper-container">
+					{# <div class="swiper-container">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
 								<div class="content-swipe">
@@ -72,101 +72,105 @@
 							<div class="swiper-custom-arrow swiper-button-next"></div>
 						</div>
 						<div class="swiper-pagination"></div>
-					</div>
-					<div class="search-property">
-						<div class="wrapper" data-aos="zoom-in" data-aos-delay="600">
-							<form action="">
-								<div class="navigation-search">
-									<div class="radio-wrapper">
-										<div class="radio-button">
-											<input type="radio" name="buy-rent" checked="checked" id="buy-option"/>
-											<label class="label-button font-text-medium" title="Buy" for="buy-option">Buy</label>
-										</div>
-										<div class="radio-button">
-											<input type="radio" name="buy-rent" id="rent-option"/>
-											<label class="label-button font-text-medium" title="Rent" for="rent-option">Rent</label>
-										</div>
+					</div> #}
+				</div>
+				<div class="search-property">
+					<div class="wrapper" data-aos="zoom-in" data-aos-delay="600">
+						<form action="">
+							<div class="navigation-search">
+								<div class="radio-wrapper">
+									<div class="radio-button">
+										<input type="radio" name="buy-rent" checked="checked" id="buy-option"/>
+										<label class="label-button font-text-bold" title="Buy" for="buy-option">Buy</label>
+									</div>
+									<div class="radio-button">
+										<input type="radio" name="buy-rent" id="rent-option"/>
+										<label class="label-button font-text-bold" title="Rent" for="rent-option">Rent</label>
 									</div>
 								</div>
-								<div class="input-search">
-									<div class="input-wrapper">
-										<span class="icon fa fa-map-marker-alt"></span>
-										<input type="text" name="input_city" class="form-control simple-search"  id="home-search" placeholder="Search City..." autocomplete="off">
-										<input type="hidden" name="input_city_hidden" id="home-search-hidden">
-										<div class="button-search-area">
-											<button type="button" class="advance-search font-text-medium" data-toggle="collapse" data-target="#advance-area" aria-expanded="false" aria-controls="advance-area">
-												Advance
-												<span class="fa fa-angle-down"></span>
-											</button>
-											<button class="button with-icon full-rounded" type="submit">
-												<span class="fa fa-search"></span>
-											</button>
-										</div>
+							</div>
+							<div class="input-search">
+								<div class="input-wrapper">
+									<span class="icon fa fa-map-marker-alt"></span>
+									<input type="text" name="input_city" class="form-control simple-search"  id="home-search" placeholder="Search City..." autocomplete="off">
+									<input type="hidden" name="input_city_hidden" id="home-search-hidden">
+									<div class="button-search-area">
+										{# <button type="button" class="advance-search font-text-medium" data-toggle="collapse" data-target="#advance-area" aria-expanded="false" aria-controls="advance-area">
+											Advanced
+											<span class="fa fa-angle-down"></span>
+										</button> #}
+										<button type="button" class="advance-search font-text-medium" data-toggle="modal" data-target="#modal-advanced-search">
+											Advanced
+											<span class="fa fa-angle-right"></span>
+										</button>
+										<button class="button with-icon" type="submit">
+											<span class="fa fa-search"></span>
+										</button>
 									</div>
-									<div class="advance-area collapse" id="advance-area">
-										<div class="advance-wrapper">
-											<div class="form-row">
-												<div class="form-group col-6">
-													<select class="form-control" id="input-bedroom" name="input-bedroom">
-														<option value="" class="placeholder" hidden>Bedroom</option>
-														<option value="1 Bedroom">1 Bedroom</option>
-														<option value="2 Bedroom">2 Bedroom</option>
-														<option value="3 Bedroom">3 Bedroom</option>
-														<option value="4 Bedroom">4 Bedroom</option>
-													</select>
-												</div>
-												<div class="form-group col-6">
-													<select class="form-control" id="input-bathroom" name="input-bathroom">
-														<option value="" class="placeholder" hidden>Bathroom</option>
-														<option value="1 Bathroom">1 Bathroom</option>
-														<option value="2 Bathroom">2 Bathroom</option>
-														<option value="3 Bathroom">3 Bathroom</option>
-														<option value="4 Bathroom">4 Bathroom</option>
-													</select>
-												</div>
-												<div class="form-group col-6">
-													<select class="form-control" id="input-transaction" name="input-transaction">
-														<option value="" class="placeholder" hidden>Transaction</option>
-														<option value="Buy">Buy</option>
-														<option value="Rent">Rent</option>
-													</select>
-												</div>
-												<div class="form-group col-6">
-													<select class="form-control" id="input-property-type" name="input-property-type">
-														<option value="" class="placeholder" hidden>Property Type</option>
-														<option value="Rumah">Rumah</option>
-														<option value="Apartemen">Apartemen</option>
-														<option value="Tanah">Tanah</option>
-													</select>
-												</div>
-												<div class="form-group col-6">
-													<select class="form-control" id="input-province" name="input-province">
-														<option value="" class="placeholder" hidden>Province</option>
-														<option value="DKI Jakarta">DKI Jakarta</option>
-														<option value="Jawa Barat">Jawa Barat</option>
-													</select>
-												</div>
-												<div class="form-group col-6">
-													<select class="form-control" id="input-city" name="input-city">
-														<option value="" class="placeholder" hidden>City</option>
-														<option value="Jakarta Timur">Jakarta Timur</option>
-														<option value="Jakarta Selatan">Jakarta Selatan</option>
-														<option value="Jakarta Barat">Jakarta Barat</option>
-													</select>
-												</div>
-												<div class="form-group col-6">
-													<input class="form-control price-currency min" id="min-price" name="min-price" placeholder="Min Price">
-												</div>
-												<div class="form-group col-6">
-													<input class="form-control price-currency max" id="max-price" name="max-price" placeholder="Max Price">
-												</div>
+								</div>
+								{# <div class="advance-area collapse" id="advance-area">
+									<div class="advance-wrapper">
+										<div class="form-row">
+											<div class="form-group col-6">
+												<select class="form-control" id="input-bedroom" name="input-bedroom">
+													<option value="" class="placeholder" hidden>Bedroom</option>
+													<option value="1 Bedroom">1 Bedroom</option>
+													<option value="2 Bedroom">2 Bedroom</option>
+													<option value="3 Bedroom">3 Bedroom</option>
+													<option value="4 Bedroom">4 Bedroom</option>
+												</select>
 											</div>
-											<button class="button full-width full-rounded font-text-bold" type="submit">Search</button>
+											<div class="form-group col-6">
+												<select class="form-control" id="input-bathroom" name="input-bathroom">
+													<option value="" class="placeholder" hidden>Bathroom</option>
+													<option value="1 Bathroom">1 Bathroom</option>
+													<option value="2 Bathroom">2 Bathroom</option>
+													<option value="3 Bathroom">3 Bathroom</option>
+													<option value="4 Bathroom">4 Bathroom</option>
+												</select>
+											</div>
+											<div class="form-group col-6">
+												<select class="form-control" id="input-transaction" name="input-transaction">
+													<option value="" class="placeholder" hidden>Transaction</option>
+													<option value="Buy">Buy</option>
+													<option value="Rent">Rent</option>
+												</select>
+											</div>
+											<div class="form-group col-6">
+												<select class="form-control" id="input-property-type" name="input-property-type">
+													<option value="" class="placeholder" hidden>Property Type</option>
+													<option value="Rumah">Rumah</option>
+													<option value="Apartemen">Apartemen</option>
+													<option value="Tanah">Tanah</option>
+												</select>
+											</div>
+											<div class="form-group col-6">
+												<select class="form-control" id="input-province" name="input-province">
+													<option value="" class="placeholder" hidden>Province</option>
+													<option value="DKI Jakarta">DKI Jakarta</option>
+													<option value="Jawa Barat">Jawa Barat</option>
+												</select>
+											</div>
+											<div class="form-group col-6">
+												<select class="form-control" id="input-city" name="input-city">
+													<option value="" class="placeholder" hidden>City</option>
+													<option value="Jakarta Timur">Jakarta Timur</option>
+													<option value="Jakarta Selatan">Jakarta Selatan</option>
+													<option value="Jakarta Barat">Jakarta Barat</option>
+												</select>
+											</div>
+											<div class="form-group col-6">
+												<input class="form-control price-currency min" id="min-price" name="min-price" placeholder="Min Price">
+											</div>
+											<div class="form-group col-6">
+												<input class="form-control price-currency max" id="max-price" name="max-price" placeholder="Max Price">
+											</div>
 										</div>
+										<button class="button full-width font-text-bold" type="submit">Search</button>
 									</div>
-								</div>
-							</form>
-						</div>
+								</div> #}
+							</div>
+						</form>
 					</div>
 				</div>
 			</section>
@@ -757,7 +761,7 @@
 								<div class="col-11 col-md-8 col-lg-7 col-xl-6">
 									<h3 class="font-text-bold">Interested Selling With Us?</h3>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
-									<a href="sell.html" class="button full-rounded font-text-bold">Sell With Us</a>
+									<a href="sell.html" class="button font-text-bold">Sell With Us</a>
 								</div>
 							</div>
 						</div>
