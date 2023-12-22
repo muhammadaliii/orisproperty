@@ -154,8 +154,23 @@ footer {
 			transition: all 0.3s linear;
 		}
 
+		.icon-buttom {
+			display: block;
+			width: 18px;
+			height: 18px;
+			margin: 0 auto;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+
+			&.fa-tiktok {
+				background-image: url('../assets/img/icon-tiktok-white.png');
+			}
+		}
+
 		li {
 			margin: 0;
+			vertical-align: middle;
 
 			+ li {
 				margin: 0 0 0 4px;
@@ -173,6 +188,14 @@ footer {
 				a {
 					&:hover {
 						background-color: $twitter;
+					}
+				}
+			}
+
+			&.tiktok {
+				a {
+					&:hover {
+						background-color: $gold;
 					}
 				}
 			}

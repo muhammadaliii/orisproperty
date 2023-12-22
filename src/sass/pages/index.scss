@@ -201,6 +201,7 @@
 		@include breakpoint(wide) {
 			width: 50%;
 			// top: 46%;
+			padding: 30vh 0;
 		}
 
 		.advance-area {
@@ -235,6 +236,10 @@
 
 		@include breakpoint(tablet) {
 			font-size: 2.4em;
+		}
+
+		@include breakpoint(wide) {
+			font-size: 2.2em;
 		}
 
 		+ p {
@@ -283,7 +288,7 @@
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
-			border-radius: 100%;
+			border-radius: 8px;
 			box-shadow: 2px 4px 30px rgba(0,0,0,0.15);
 			transition: $transition-base;
 

@@ -34,7 +34,7 @@
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
-			border-radius: 100%;
+			border-radius: 8px;
 			box-shadow: 2px 4px 30px rgba(0,0,0,0.15);
 			transition: $transition-base;
 
@@ -106,7 +106,7 @@
 			height: 34px;
 			opacity: 0.4;
 			background-color: $button-background;
-			border-radius: 100%;
+			border-radius: 8px;
 
 			&:hover {
 				@include breakpoint(desktop) {
