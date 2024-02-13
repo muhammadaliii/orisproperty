@@ -75,12 +75,15 @@ $(function() {
 		width: width + "%"
 	}, time);
 
-	window.onload = function(){
-		var targetLoader = $("#loader-wrapper");
-			targetLoader.fadeOut("slow", function(){
-				targetLoader.remove();
-			});
-	}
+	$(document).ready(function() {
+		window.onload = function(){
+			var targetLoader = $("#loader-wrapper");
+				targetLoader.fadeOut("slow", function(){
+					targetLoader.remove();
+				});
+		}
+	});
+
 
 	orientationChange();
 

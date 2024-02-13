@@ -103,6 +103,7 @@ body {
 			bottom: initial;
 			right: 2px;
 			left: initial;
+			border-radius: 8px;
 
 			&:hover {
 				@include breakpoint(desktop) {

@@ -101,6 +101,13 @@
 
 	.close {
 		background-color: #eaeef5;
+
+		&:hover {
+			@include breakpoint(desktop) {
+				background-color: $button-hover-background;
+				opacity: 1;
+			}
+		}
 	}
 
 	.modal-dialog {
