@@ -4,6 +4,7 @@
 	@include breakpoint(tablet) {
 		margin-top: 50px;
 	}
+
 	.page-item {
 		margin: 0 4px;
 
@@ -25,6 +26,26 @@
 						background-color: $gold;
 					}
 				}
+			}
+		}
+
+		& +.btn-icon {
+			font-family: 'montserrat_bold';
+			background-color: transparent;
+			line-height: 24px;
+			color: $navy;
+			pointer-events: none;
+			margin: 0 4px !important;
+			padding: 0;
+			width: 30px;
+			height: 30px;
+			opacity: 0.4;
+			display: block;
+
+			@include breakpoint(tablet) {
+				font-size: 1.2em;
+				width: 34px;
+				height: 34px;
 			}
 		}
 
