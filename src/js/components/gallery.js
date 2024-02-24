@@ -128,16 +128,16 @@
 		},
 		on: {
 			init: function () {
-				console.log( 'init :', this.realIndex );
+				// console.log( 'init :', this.realIndex );
 			},
 			realIndexChange: function () {
-				console.log( 'realIndexChange :', this.realIndex )
+				// console.log( 'realIndexChange :', this.realIndex )
 			},
 			slideChange: function () {
-				console.log( 'slideChange :', this.realIndex );
+				// console.log( 'slideChange :', this.realIndex );
 			},
 			slideChangeTransitionStart: function () {
-				console.log( 'slideChangeTransitionStart :', this.realIndex );
+				// console.log( 'slideChangeTransitionStart :', this.realIndex );
 			},
 			slideChangeTransitionEnd: function () {
 				var elementFind = $('.thumbnail-slider .swiper-slide');
